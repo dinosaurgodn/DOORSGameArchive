@@ -1637,115 +1637,79 @@
 </footer>
 
 
+```html
 <!-- =========================
      ROBLOX AVATAR UPDATER
      ========================= -->
 
 <script>
-
-(async function updateRobloxAvatars() {
+(function updateRobloxAvatars() {
 
     const avatarImages =
-        document.querySelectorAll("[data-roblox-user-id]");
+        document.querySelectorAll(".roblox-avatar");
 
-    if (!avatarImages.length) {
-        return;
-    }
+    avatarImages.forEach(img => {
 
-    const userIds = [...avatarImages].map(img =>
-        img.getAttribute("data-roblox-user-id")
-    );
+        const userId =
+            img.getAttribute("data-roblox-user-id");
 
-    const robloxApi =
-        "https://thumbnails.roblox.com/v1/users/avatar-headshot" +
-        "?userIds=" +
-        encodeURIComponent(userIds.join(",")) +
-        "&size=150x150&format=Png&isCircular=false";
+        if (!userId) return;
 
-    /*
-     * AllOrigins adds CORS headers so this
-     * GitHub Pages site can read the JSON.
-     */
+        // Load the Roblox avatar directly.
+        // This removes the slow AllOrigins proxy.
+        const avatarUrl =
+            "https://thumbnails.roblox.com/v1/users/avatar-headshot" +
+            "?userIds=" + encodeURIComponent(userId) +
+            "&size=150x150" +
+            "&format=Png" +
+            "&isCircular=false";
 
-    const proxyUrl =
-        "https://api.allorigins.win/raw?url=" +
-        encodeURIComponent(robloxApi);
+        // Ask Roblox for the thumbnail immediately.
+        fetch(avatarUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(
+                        "Roblox thumbnail request failed: " +
+                        response.status
+                    );
+                }
 
-    try {
+                return response.json();
+            })
+            .then(result => {
 
-        const response = await fetch(proxyUrl, {
-            cache: "no-store"
-        });
+                if (
+                    !result ||
+                    !Array.isArray(result.data) ||
+                    !result.data.length
+                ) {
+                    throw new Error(
+                        "No Roblox thumbnail returned."
+                    );
+                }
 
-        if (!response.ok) {
+                const imageUrl =
+                    result.data[0].imageUrl;
 
-            throw new Error(
-                "Avatar proxy returned HTTP " +
-                response.status
-            );
+                if (imageUrl) {
+                    img.src = imageUrl;
+                }
 
-        }
+            })
+            .catch(error => {
 
-        const result = await response.json();
+                // Keep the original fallback image
+                // if Roblox cannot be reached.
+                console.warn(
+                    "Could not update Roblox avatar:",
+                    error
+                );
 
-        if (!result || !Array.isArray(result.data)) {
+            });
 
-            throw new Error(
-                "Unexpected Roblox thumbnail response."
-            );
-
-        }
-
-        const thumbnails = new Map(
-
-            result.data
-                .filter(
-                    item =>
-                        item &&
-                        item.targetId &&
-                        item.imageUrl
-                )
-                .map(
-                    item => [
-                        String(item.targetId),
-                        item.imageUrl
-                    ]
-                )
-
-        );
-
-        avatarImages.forEach(img => {
-
-            const userId =
-                img.getAttribute("data-roblox-user-id");
-
-            const imageUrl =
-                thumbnails.get(userId);
-
-            if (imageUrl) {
-
-                img.src = imageUrl;
-
-            }
-
-        });
-
-    } catch (error) {
-
-        /*
-         * If the proxy fails, the original
-         * fallback image remains.
-         */
-
-        console.warn(
-            "Could not automatically update Roblox avatars:",
-            error
-        );
-
-    }
+    });
 
 })();
-
 </script>
 
 </body>
