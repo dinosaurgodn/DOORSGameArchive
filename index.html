@@ -1,14 +1,26 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://codehs.com/uploads/4a8c90e314e446e76e01e8d7721770a9" type="image">
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+    <link rel="icon"
+          href="https://codehs.com/uploads/4a8c90e314e446e76e01e8d7721770a9"
+          type="image">
+
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+          rel="stylesheet">
+
     <title>Dinosaurgodn</title>
+
     <style>
+        /* =========================
+           PAGE
+           ========================= */
+
         body {
-            margin: 0px;
+            margin: 0;
             padding: 1px;
             background-image: url('https://codehs.com/uploads/356778ebb1c4e113c7be5a451567f215');
             background-size: cover;
@@ -20,108 +32,213 @@
             font-style: normal;
             font-family: 'Michroma', sans-serif;
         }
+
         h1 {
             text-align: center;
             font-size: 30px;
             color: red;
-            text-shadow: 4px 4px 6px black, -4px -4px 6px black, 4px -4px 6px black, -4px 4px 6px black;
+            text-shadow:
+                4px 4px 6px black,
+                -4px -4px 6px black,
+                4px -4px 6px black,
+                -4px 4px 6px black;
         }
-        .header-image {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-        }
+
+        /* =========================
+           GENERAL IMAGE CONTAINERS
+           ========================= */
+
         .center-images {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            align-items: center;
             gap: 20px;
             margin: 20px 0;
         }
-        .center-images img {
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-        }
+
         .left-images {
             display: flex;
             flex-wrap: wrap;
-            justify-content: left;
+            justify-content: flex-start;
+            align-items: center;
             gap: 20px;
             margin: 20px 0;
         }
-        .left-images img {
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-        }
+
         .right-images {
             display: flex;
             flex-wrap: wrap;
-            justify-content: right;
+            justify-content: flex-end;
+            align-items: center;
             gap: 20px;
             margin: 20px 0;
         }
+
+        /*
+         * All normal images are circles.
+         * object-fit: cover prevents stretching.
+         */
+        .center-images img,
+        .left-images img,
         .right-images img {
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Hover effect */
+        .center-images a:hover img,
+        .left-images a:hover img,
+        .right-images a:hover img {
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           ROBLOX AVATARS
+           ========================= */
+
+        .roblox-avatar {
             width: 150px;
             height: 150px;
-            border-radius: 10px;
+            border-radius: 50% !important;
+            object-fit: cover;
+            display: block;
+            background: #111;
         }
-        .footer {
+
+        /* =========================
+           DEVELOPMENT TEAM
+           ========================= */
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            margin: 20px 0 40px;
+        }
+
+        .team-member {
+            width: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             text-align: center;
-            margin-top: 20px;
+            gap: 12px;
         }
+
+        .team-member h2 {
+            margin: 0;
+            font-size: 18px;
+            color: white;
+            text-shadow:
+                3px 3px 5px black,
+                -3px -3px 5px black,
+                3px -3px 5px black,
+                -3px 3px 5px black;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* =========================
+           CUSTOM SIZES
+           ========================= */
+
         #DiffrentSize1 {
-            height: 150px; width: 200px;
+            height: 150px;
+            width: 200px;
         }
+
         #DiffrentSize2 {
-            height: 130px; width: 170px;
+            height: 130px;
+            width: 170px;
         }
+
         #DiffrentSize3 {
-            height: 50px; width: 90px;
+            height: 50px;
+            width: 90px;
         }
+
         #DiffrentSize4 {
-            height: 150px; width: 180px;
+            height: 150px;
+            width: 180px;
         }
+
         #DiffrentSize5 {
-            height: 310px; width: 540px;
+            height: 310px;
+            width: 540px;
         }
+
         #DiffrentSize6 {
-            height: 200px; width: 340px;
+            height: 200px;
+            width: 340px;
         }
+
         #DiffrentSize7 {
-            height: 400px; width: 350px;
+            height: 400px;
+            width: 350px;
         }
+
         #DiffrentSize8 {
-            height: 500px; width: 300px;
+            height: 500px;
+            width: 300px;
         }
+
         #Diffrentsize9 {
-            height: 200px; width: 340px;
+            height: 200px;
+            width: 340px;
         }
+
         #DiffrentSize10 {
-            height: 150px; width: 200px;
+            height: 150px;
+            width: 200px;
         }
+
         #DiffrentSize11 {
-            height: 50px; width: 50px;
+            height: 50px;
+            width: 50px;
         }
+
         #DiffrentSize12 {
-            height: 114px; width: 190px;
+            height: 114px;
+            width: 190px;
         }
+
         #DiffrentSize13 {
-            height: 190px; width: 190px;
+            height: 190px;
+            width: 190px;
         }
+
         #DifferentSize14 {
-            height: 110px; width:110px;
+            height: 110px;
+            width: 110px;
         }
+
         #DiffrentSize15 {
-            height: 240px; width: 540px;
+            height: 240px;
+            width: 540px;
         }
+
+        /* =========================
+           VIDEO
+           ========================= */
+
         .video-container {
             position: relative;
             padding-bottom: 50.25%;
             height: 0;
             overflow: hidden;
         }
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -129,759 +246,1407 @@
             width: 20%;
             height: 20%;
         }
-        .roblox-avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-            object-fit: cover;
-            background: #111;
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
-<header>
 
-</header>
 <body>
-    <h1>DOORS Game & Development Place</h1>
-    <div class="center-images">
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img src="https://codehs.com/uploads/aef3c5ac4cc97664c7739a3ea09efbc6" alt="DOORS">
+
+<header>
+</header>
+
+<!-- =========================
+     MAIN DOORS LINKS
+     ========================= -->
+
+<h1>DOORS Game & Development Place</h1>
+
+<div class="center-images">
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img
+            src="https://codehs.com/uploads/aef3c5ac4cc97664c7739a3ea09efbc6"
+            alt="DOORS">
+    </a>
+
+    <a href="https://www.roblox.com/games/10548891534/D-TESTING#!/game-instances">
+        <img
+            src="https://codehs.com/uploads/d686624fb5ab6fc621ba85cc6d1599d0"
+            alt="D-TESTING">
+    </a>
+</div>
+
+<!-- =========================
+     DEVELOPMENT TEAM
+     ========================= -->
+
+<h1>DOORS Development Team</h1>
+
+<div class="team-grid">
+
+    <div class="team-member">
+        <h2>Lsplash / LightningSplash</h2>
+
+        <a href="https://www.roblox.com/users/8645047/profile">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="8645047"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=8645047&width=150&height=150&format=png"
+                alt="Lightning_Splash">
         </a>
-        <a href="https://www.roblox.com/games/10548891534/D-TESTING#!/game-instances">
-            <img src="https://codehs.com/uploads/d686624fb5ab6fc621ba85cc6d1599d0" alt="D-TESTING">
+
+        <a href="https://x.com/LightningSplash">
+            <img
+                src="https://codehs.com/uploads/f03aba9a75a57f46ae94ecf4c52e82d6"
+                alt="LSPLASHTwitter">
         </a>
     </div>
-    <h1>DOORS Development Team</h1>
-    <div class="center-images">
-        <div class="center-images">
-            <h1>Lsplash/LightningSplash</h1>
-            <a href="https://www.roblox.com/users/8645047/profile">
-                <img class="roblox-avatar"
-                     data-roblox-user-id="8645047"
-                     src="https://www.roblox.com/headshot-thumbnail/image?userId=8645047&width=150&height=150&format=png"
-                     alt="Lightning_Splash">
-            </a>
-            <a href="https://x.com/LightningSplash">
-                <img src="https://codehs.com/uploads/f03aba9a75a57f46ae94ecf4c52e82d6" alt="LSPLASHTwitter">
-            </a>
-        </div>
-        <div class="center-images">
-            <h1>RediblesQW/Red</h1>
-            <a href="https://www.roblox.com/users/41767201/profile">
-                <img class="roblox-avatar"
-                     data-roblox-user-id="41767201"
-                     src="https://www.roblox.com/headshot-thumbnail/image?userId=41767201&width=150&height=150&format=png"
-                     alt="RediblesQW">
-            </a>
-            <a href="https://x.com/RediblesQW">
-                <img src="https://codehs.com/uploads/2fc3003c713ae490f56f9280b3a1e6f3" alt="RediblesTwitter">
-            </a>
-        </div>
+
+    <div class="team-member">
+        <h2>RediblesQW / Red</h2>
+
+        <a href="https://www.roblox.com/users/41767201/profile">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="41767201"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=41767201&width=150&height=150&format=png"
+                alt="RediblesQW">
+        </a>
+
+        <a href="https://x.com/RediblesQW">
+            <img
+                src="https://codehs.com/uploads/2fc3003c713ae490f56f9280b3a1e6f3"
+                alt="RediblesTwitter">
+        </a>
+    </div>
+
+    <div class="team-member">
+        <h2>Jasper_Creatons</h2>
+
         <a href="https://www.roblox.com/users/1418691708/profile">
-            <img class="roblox-avatar"
-                 data-roblox-user-id="1418691708"
-                 src="https://www.roblox.com/headshot-thumbnail/image?userId=1418691708&width=150&height=150&format=png"
-                 alt="Jasper_Creatons">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="1418691708"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=1418691708&width=150&height=150&format=png"
+                alt="Jasper_Creatons">
         </a>
+    </div>
+
+    <div class="team-member">
+        <h2>Normally_Avaradge</h2>
+
         <a href="https://www.roblox.com/users/17437100/profile">
-            <img class="roblox-avatar"
-                 data-roblox-user-id="17437100"
-                 src="https://www.roblox.com/headshot-thumbnail/image?userId=17437100&width=150&height=150&format=png"
-                 alt="Normally_Avaradge">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="17437100"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=17437100&width=150&height=150&format=png"
+                alt="Normally_Avaradge">
         </a>
+    </div>
+
+    <div class="team-member">
+        <h2>Tom</h2>
+
         <a href="https://www.roblox.com/users/26266254/profile">
-            <img class="roblox-avatar"
-                 data-roblox-user-id="26266254"
-                 src="https://www.roblox.com/headshot-thumbnail/image?userId=26266254&width=150&height=150&format=png"
-                 alt="Tom">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="26266254"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=26266254&width=150&height=150&format=png"
+                alt="Tom">
         </a>
+    </div>
+
+    <div class="team-member">
+        <h2>Stryfal</h2>
+
         <a href="https://www.roblox.com/users/57072827/profile">
-            <img class="roblox-avatar"
-                 data-roblox-user-id="57072827"
-                 src="https://www.roblox.com/headshot-thumbnail/image?userId=57072827&width=150&height=150&format=png"
-                 alt="Stryfal">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="57072827"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=57072827&width=150&height=150&format=png"
+                alt="Stryfal">
         </a>
+    </div>
+
+    <div class="team-member">
+        <h2>Echidenpai</h2>
+
         <a href="https://www.roblox.com/users/109927729/profile">
-            <img class="roblox-avatar"
-                 data-roblox-user-id="109927729"
-                 src="https://www.roblox.com/headshot-thumbnail/image?userId=109927729&width=150&height=150&format=png"
-                 alt="Echidenpai">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="109927729"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=109927729&width=150&height=150&format=png"
+                alt="Echidenpai">
         </a>
+    </div>
+
+    <div class="team-member">
+        <h2>Ghostly_Wowzers</h2>
+
         <a href="https://www.roblox.com/users/64758432/profile">
-            <img class="roblox-avatar"
-                 data-roblox-user-id="64758432"
-                 src="https://www.roblox.com/headshot-thumbnail/image?userId=64758432&width=150&height=150&format=png"
-                 alt="Ghostly_Wowzers">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="64758432"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=64758432&width=150&height=150&format=png"
+                alt="Ghostly_Wowzers">
         </a>
+    </div>
+
+    <div class="team-member">
+        <h2>SComics</h2>
+
         <a href="https://www.roblox.com/users/76144759/profile">
-            <img class="roblox-avatar"
-                 data-roblox-user-id="76144759"
-                 src="https://www.roblox.com/headshot-thumbnail/image?userId=76144759&width=150&height=150&format=png"
-                 alt="SComics">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="76144759"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=76144759&width=150&height=150&format=png"
+                alt="SComics">
         </a>
+    </div>
+
+    <div class="team-member">
+        <h2>Puffo</h2>
+
         <a href="https://www.roblox.com/users/37110565/profile">
-            <img class="roblox-avatar"
-                 data-roblox-user-id="37110565"
-                 src="https://www.roblox.com/headshot-thumbnail/image?userId=37110565&width=150&height=150&format=png"
-                 alt="Puffo">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="37110565"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=37110565&width=150&height=150&format=png"
+                alt="Puffo">
         </a>
+    </div>
+
+    <div class="team-member">
+        <h2>ellieflopper</h2>
+
         <a href="https://www.roblox.com/users/109282935/profile">
-            <img class="roblox-avatar"
-                 data-roblox-user-id="109282935"
-                 src="https://www.roblox.com/headshot-thumbnail/image?userId=109282935&width=150&height=150&format=png"
-                 alt="ellieflopper">
-        </a>
-    </div>
-    <h1>All DOORS Icons</h1>
-    <div class="center-images">
-        <a href="https://roblox-doors.fandom.com/wiki/DOORS">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/19e00f2ac4d9244d727b372edd704f74" alt="DOORS-Release-Icon">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/2023_April_Fools_Event">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/ab171c34bd7582c6d7aab3ff594673a9" alt="DOORS-April-Fools-2023-Icon">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/The_Hotel%2B_Update">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/3aee3b5fbfa0b0b26cfe66ebb086443b" alt="DOORS-Hotel-+-Update-Icon">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/Modifiers">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/eacee788ab8b85804788b0c59d6089a1" alt="DOORS-Modifiers-Icon">
-        </a>
-        <a href="https://roblox-doors.fandom.com/wiki/DOORS">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/bd76ea042141de92f919f56c982d3a74" alt="DOORS">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/The_Hunt_Update">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/7fa449c980277246943a61fb1af1923b" alt="DOORS-The-Hunt-Event-Icon">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/The_Backdoor">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/0331ca996989a4a52bed177d5a7b6f6b" alt="DOORS-The-Backdoor-Update-Icon">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/2024_April_Fools_Event">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/9d2707a935facc5609e68c6bf7677a15" alt="DOORS-April-Fools-2024-Icon">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/The_Mines">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/d9bee144bd727b123886908442c43e7a" alt="DOORS-The-Mines-Update-Icon">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/2024_Trick_Or_Treat_Event">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/7038fb550ff410ea9b25811ac18e2a8e" alt="Trick-Or-Treat">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/The_Content_Update">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/d07290c1d8f4b30c580f65eb36ca7595" alt="DOORS-The-Content-Update-Icon">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/2025_April_Fools_Event">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/f47d998eb39b02c1dd531a1337dab65a" alt="DOORS-Ranked-Mode-Update-Icon">
-        </a>
-        <a href="https://roblox-doors.fandom.com/wiki/DOORS">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/aef3c5ac4cc97664c7739a3ea09efbc6" alt="DOORS">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/The_Outdoors">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/3f93d6452cf04bfa4101559494298541" alt="The-Out-DOORS">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/Battle_Mode">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/008aeeb94da571e3622c58ee78a71fdb" alt="Battle-Mode">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/The_Halloween_Spotlight_Event">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/3e7e9d13d7102ff2c446605f762d88dc" alt="Trick-Or-Treat">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/492f3b338092892b768e699ab4215d0d" alt="Chrismas">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/b5ac0c3d6978041d0d39c5ea69d4263f" alt="Cringles-Workshop">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/e0e3a7483a1eaf03b93f7211b8e76a30" alt="Daily-Runs">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/a6fba21a03e3d7752098358683708b98" alt="CHAOS-MODE 🌌">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/ae7e4f0cf40066f17321759a335409cd" alt="rush-mode-endless-mode">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize13"src="https://codehs.com/uploads/10645b5175044e96d92a053f0f16cc50" alt="The-Archives">
-        </a>
-    </div>
-        <h1>All DOORS Game Thumbnails</h1>
-    <div class="center-images">
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/aa5e4fbc1f2a2d3c09bb0e232356fae8" alt="DOORS-Release">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/33183fdfad542b8c51d5adb82dc8b5b0" alt="DOORS-April-Fools-2023">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/983b91bfb9513a7cb4823f613e3f994c" alt="DOORS-Hotel+-Update">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/Modifiers">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/9979fabc1cacf10e1f250cb64e88aaa4" alt="DOORS-Modifiers">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/The_Hunt_Update">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/3cc4f9f9caba92adb602c2233027977e" alt="DOORS-The-Hunt-Event-Icon">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/02b20454e63c10998e8fbff0647726dc" alt="DOORS-Backdoor-Update">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/794c9a590288e4d03a788f37b798ca2f" alt="DOORS-April-Fools-2024">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/63c1aa225dc412a189501df4665c3d3c" alt="DOORS-Floor-2-Update">
-        </a>
-        <a href="https://doors-game.fandom.com/wiki/2024_Trick_Or_Treat_Event">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/6005cc898fcd7635282b0506650521e1" alt="Trick-Or-Treat">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/ad4a3846ee1332ed0c9ee810d2c93885" alt="DOORS-Content-Update">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/46551d0076d074e93692e5374c10151c" alt="DOORS-Rush-Normal">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/bc31e1ba34b4ec22001ca5490ba3168d" alt="DOORS-Rush-Blue">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/a8252732048add28b2a508bfd30eb5b5" alt="DOORS-Lobby-Front-Doors">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/a86ab187bb1625ac3d7945081e1a2a50" alt="DOORS-Lobby-Back-Fire-Place">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/df81df1d35adf2aaa3d96c672a422a59" alt="DOORS-Spawn-Room">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/daf00a9f7e93b42435ea120467543c5e" alt="DOORS-Seek-Door-13">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/5b05ae26cc2080e4be83d03c91c7e5cf" alt="DOORS-April-Fools-2025">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/a79d2321981985665826ab808439d8b2" alt="DOORS-The-Out-DOORS">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/145e8243f8267e9c2ca121533b6c16d3" alt="DOORS-Battle-Mode">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/ce4ef06074c7cc42495c11cdf2b10dbf" alt="DOORS-Trick-Or-Treat">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/0e225af6c832c803af3076e00309246a" alt="DOORS-Chrismas">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/760f116fda8311609b3f4f9a31a9e63e" alt="DOORS-Cringles-Workshop">
-        </a>
-        <a href="https://www.roblox.com/games/6516141723/DOORS">
-            <img id="DiffrentSize6"src="https://codehs.com/uploads/372d7552e3b62224b09fde87341a15cf" alt="DOORS-The-Archives">
-        </a>
-    </div>
-    <h1>DOORS Update Trailers</h1>
-    <div class="center-images">
-        <a href="https://www.youtube.com/watch?v=me_w3eDtYRo&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/b54309c4f12ef771bc86086ca9917246" alt="DOORS-Coming-Soon-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=XBNL6Rq13Ho&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=2">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/aa5e4fbc1f2a2d3c09bb0e232356fae8" alt="DOORS-Release-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=p7NKqVJzH4E&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=3">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/b607a7ee19df15a6f9bf715126d105c1" alt="DOORS-Exctendid-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=t0NAJqAS9qM&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=4">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/8ddef8643be88b3889a86a4fafb19af7" alt="DOORS-Hotel+-Sneak-Peak-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=bSTo-0M9Mjg&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=5">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/415554ad7c136e3a20d0bcda05a9e06e" alt="DOORS-Hotel+-Teaser-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=IlVShjKur0I&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=6">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/983b91bfb9513a7cb4823f613e3f994c" alt="DOORS-Hotel+-Full-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=6w-e50dXZ_s&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=7">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/855d1e82186a34e400dc516d08e3c25b" alt="DOORS-Modifiers-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=ZU0owH2nxGk&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=8">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/1f760c70bd3d3d4565262c29dfa17a7b" alt="DOORS-The-Hunt-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=6wacCUMyePI&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=9">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/d9be4bcd45252b8d10d5424587ef647c" alt="DOORS-Floor-2-Sneak-Peak-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=2BReqL3E5f4&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=10">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/92ed8311d031ce9c40610bee2261dd33" alt="DOORS-Floor-2-Teaser-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=-irDHCt-bug&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=11">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/125e90982c7ae8144d5ed9ccdd621bfe" alt="DOORS-Floor-2-Release-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=me_w3eDtYRo&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/ad4a3846ee1332ed0c9ee810d2c93885" alt="DOORS-Content-Update-Trailer">
-        </a>
-        <a href="https://x.com/DoorsRoblox/status/1895652250363785385">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/dd5cb3c479c68617088513f3e1987875" alt="DOORS-Garden-Subfloor-Teaser">
-        </a>
-        <a href="https://www.youtube.com/watch?v=4HNcM8bCUVk">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/81d2fc25230e9aa7db7ee14c1170731b" alt="DOORS-The-Out-Door-Teaser-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=ZiETzDala9Y&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=16">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/8c9898f4be2b3fbd73e02d5ba79d2214" alt="DOORS-The-Out-Door-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=PxB3MmN_-mo">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/8cae7898bb95432e1ef5d8c51cc0a1ac" alt="DOORS-Cringles-Workshop-Trailer">
-        </a>
-        <a href="https://www.youtube.com/watch?v=nI4r0eOxLmU">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/b76bc239ee92f97f1e08df091da593e8" alt="DOORS-Archives-Trailer-1">
-        </a>
-        <a href="https://www.youtube.com/shorts/8zvux23jT4Q">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/405d86fcbcf8b0860306f4e798a6caf2" alt="DOORS-Archives-Teaser-1">
-        </a>
-        <a href="https://www.youtube.com/shorts/V7dnavBi0zk">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/24ca4b7743d36498ece80447c729a107" alt="DOORS-Archives-Teaser-2">
-        </a>
-        <a href="https://www.youtube.com/shorts/gycUTcW8fzY">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/bb237cbcef000247dc4c6f603881629e" alt="DOORS-Archives-Teaser-3">
-        </a>
-        <a href="https://www.youtube.com/shorts/080eRdfUEDo">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/edee5b910b1257dbed7c6519fff3143e" alt="DOORS-Archives-Teaser-4">
-        </a>
-        <a href="https://www.youtube.com/watch?v=jCSv6L7fov8&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=23">
-            <img id="DiffrentSize12"src="https://codehs.com/uploads/c5a5cc9d76375b023810e50aba157741" alt="DOORS-Archives-Trailer-2">
-        </a>
-    </div>
-    <h1>DOORS-UGC</h1>
-    <div class="center-images">
-        <a href="https://www.roblox.com/catalog/126247458615142/DOORS-Doors-Mans-Beanie">
-                <img src="https://codehs.com/uploads/632ff54f476c1b81cb1097a61ef5ab1f" alt="Doors-Mans-Beanie">
-            </a>
-            <a href="https://www.roblox.com/catalog/110102774584171/DOORS-Doors-Mans-Studs">
-                <img src="https://codehs.com/uploads/1d4312034e73fa226a886481baa546df" alt="Doors-Mans-Studs">
-            </a>
-            <a href="https://www.roblox.com/catalog/131178144447181/DOORS-Doors-Mans-Stubble">
-                <img src="https://codehs.com/uploads/b0c9e5599877b1ce86e161fd67e79cc7" alt="Doors-Mans-Stubble">
-            </a>
-            <a href="https://www.roblox.com/catalog/93505697394817/DOORS-Doors-Mans-Collar">
-                <img src="https://codehs.com/uploads/f816d8d500d95592b862ef03029dad1f" alt="Doors-Mans-Collar">
-            </a>
-            <a href="https://www.roblox.com/catalog/120517971149022/DOORS-Doors-Mans-Cross-Necklace">
-                <img src="https://codehs.com/uploads/efe1f1952560720558b95a757c915e76" alt="Doors-Mans-Cross-Necklace">
-            </a>
-    </div>
-            <h1>Hotel-Mines-UGC</h1>
-            <div class="center-images">
-                <a href="https://www.roblox.com/catalog/103648094771267/DOORS-Gloombat-Head-Blue">
-                    <img src="https://codehs.com/uploads/b9a8962ef79d679e9544717f1d3bc273" alt="Gloombat-Head-Blue">
-                </a>
-                <a href="https://www.roblox.com/catalog/132875400161342/DOORS-Gloombat-Wings-Blue">
-                    <img src="https://codehs.com/uploads/c1945f786b681b105f4541732bb8f127" alt="Gloombat-Wings-Blue">
-                </a>
-                <a href="https://www.roblox.com/catalog/125712343221673/DOORS-Gloombat-Head-Red">
-                    <img src="https://codehs.com/uploads/8482aa680cd4363054330aae44a4166d" alt="Gloombat-Head-Red">
-                </a>
-                <a href="https://www.roblox.com/catalog/131706360509237/DOORS-Gloombat-Wings-Red">
-                    <img src="https://codehs.com/uploads/12955db6371230d4b114f8296fa2c304" alt="Gloombat-Wings-Red">
-                </a>
-                <a href="https://www.roblox.com/catalog/116441720310033/DOORS-Gloombat-Head-Yellow">
-                    <img src="https://codehs.com/uploads/c461bedaad1659f650c289058a8440ca" alt="Gloombat-Head-Yellow">
-                </a>
-                <a href="https://www.roblox.com/catalog/126740061882403/DOORS-Gloombat-Wings-Yellow">
-                    <img src="https://codehs.com/uploads/a906316cacaecc16a98997f7e1077171" alt="Gloombat-Wings-Yellow">
-                </a>
-                <a href="https://www.roblox.com/catalog/98522432200530/DOORS-Gloombat-Head-Green">
-                    <img src="https://codehs.com/uploads/496d6920c5a5f41788234530e2113ad4" alt="Gloombat-Head-Green">
-                </a>
-                <a href="https://www.roblox.com/catalog/78317126202695/DOORS-Gloombat-Wings-Green">
-                    <img src="https://codehs.com/uploads/97be71a7eee0b415b0fb537827fe76e0" alt="Gloombat-Wings-Green">
-                </a>
-                <a href="https://www.roblox.com/catalog/95322747130060/DOORS-Gloombat-Head-Purple">
-                    <img src="https://codehs.com/uploads/069d2372a5138c43056e70fec2f95038" alt="Gloombat-Head-Purple">
-                </a>
-                <a href="https://www.roblox.com/catalog/101936983593715/DOORS-Gloombat-Wings-Purple">
-                    <img src="https://codehs.com/uploads/b1341204689a4d63f746ccfc3455b591" alt="Gloombat-Wings-Purple">
-                </a>
-                <a href="https://www.roblox.com/catalog/109574835861882/DOORS-Sallys-Head">
-                    <img src="https://codehs.com/uploads/c042a7903f4e2bcf6f583ea246dc348c" alt="Sallys-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/100462715155558/DOORS-Sallys-Head-Happy">
-                    <img src="https://codehs.com/uploads/7fa0f6cf57943a802abd812561c5b33c" alt="Sallys-Head-Happy">
-                </a>
-                <a href="https://www.roblox.com/catalog/122523409505875/DOORS-Sallys-Skirt">
-                    <img src="https://codehs.com/uploads/5c53a5059f2e959ae028d16740456409" alt="Sallys-Skirt">
-                </a>
-                <a href="https://www.roblox.com/catalog/127312864891006/DOORS-Louies-Head">
-                    <img src="https://codehs.com/uploads/4937531222357835deacfeefa9803fe2" alt="Louies-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/122065996117904/DOORS-Louies-Tail">
-                    <img src="https://codehs.com/uploads/73778ef598491e8005d349b40bc1f820" alt="Louies-Tail">
-                </a>
-                <a href="https://www.roblox.com/catalog/78982251129107/DOORS-Louie">
-                    <img src="https://codehs.com/uploads/125abbc91449861fd7c4f16757a07133" alt="Louie">
-                </a>
-                <a href="https://www.roblox.com/catalog/100154817667791/DOORS-Marble-Halo">
-                    <img src="https://codehs.com/uploads/03f3f8cce6bf34e7238a4da7794b6910" alt="Marble-Halo">
-                </a>
-                <a href="https://www.roblox.com/catalog/79124868270890/DOORS-Marble-Wings">
-                    <img src="https://codehs.com/uploads/9ac7eff83e6a716d8b4d3175d2a82a5d" alt="Marble-Wings">
-                </a>
-                <a href="https://www.roblox.com/catalog/13592957690/DOORS-Figures-Head">
-                    <img src="https://codehs.com/uploads/16c97def91e7aa0b3ad1df0ab7f11b5c" alt="Figures-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/13593732633/DOORS-Figures-Ribcage">
-                    <img src="https://codehs.com/uploads/686e13489bce8f61cb69c99bfcac3dee" alt="Figures-Ribcage">
-                </a>
-                <a href="https://www.roblox.com/catalog/10929376540/DOORS-Figure-Hood">
-                    <img src="https://codehs.com/uploads/7b15ef07e470cc812a24cbd3acb0730a" alt="Figure-Hood">
-                </a>
-                <a href="https://www.roblox.com/catalog/13592562492/DOORS-Figure-Headphones">
-                    <img src="https://codehs.com/uploads/ac381cc03a138ef659665ae05eb7a4ed" alt="Figure-HeadPhones">
-                </a>
-                <a href="https://www.roblox.com/catalog/12443786026/DOORS-El-Goblinos-Head">
-                    <img src="https://codehs.com/uploads/cd51f91f59e86b65bd6fd5a144fd7a2e" alt="El-Goblinos-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/12443751080/DOORS-El-Goblino">
-                    <img src="https://codehs.com/uploads/b4391718b6e1b3d42d4f74a7b22f1007" alt="El-Goblino">
-                </a>
-                <a href="https://www.roblox.com/catalog/12443794241/DOORS-El-Goblinos-Tail">
-                    <img src="https://codehs.com/uploads/bee9d97f190b456d7dd748dcd1955f9a" alt="El-Goblinos-Tail">
-                </a>
-                <a href="https://www.roblox.com/catalog/14581277349/DOORS-Seeks-Eye">
-                    <img src="https://codehs.com/uploads/073f9568294851e41356efc48f83dddb" alt="Seeks-Eye">
-                </a>
-                <a href="https://www.roblox.com/catalog/14581287066/DOORS-Seeks-Eye">
-                    <img src="https://codehs.com/uploads/d94262001cdcb0a527adf91ce7d45210" alt="Seeks-Eye">
-                </a>
-                <a href="https://www.roblox.com/catalog/10929342405/DOORS-Seeks-Eye-Legacy">
-                    <img src="https://codehs.com/uploads/8ef72e4d6f7f3ed514ad9752e2b3a9c4" alt="Seeks-Eye-Legacy">
-                </a>
-                <a href="https://www.roblox.com/catalog/13592558317/DOORS-Seek-Headphones">
-                    <img src="https://codehs.com/uploads/9112ffabff5203f7f8b0438db89ad82c" alt="Seek-Headphones">
-                </a>
-                <a href="https://www.roblox.com/catalog/13584304105/DOORS-Seeks-New-Whip">
-                    <img src="https://codehs.com/uploads/a066853f8dcdc18ac050df31a796c0b7" alt="Seeks-New-Whip">
-                </a>
-                <a href="https://www.roblox.com/catalog/14581331878/DOORS-Screechs-Head">
-                    <img src="https://codehs.com/uploads/67fa740e61f96fe482cde4f06580a516" alt="Screech-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/10976430733/DOORS-Screech-Mask">
-                    <img src="https://codehs.com/uploads/8fd3c3c95bcf306d853f655cf397cb88" alt="Screech-Hoodie">
-                </a>
-                <a href="https://www.roblox.com/catalog/13584359316/DOORS-Screech-Headphones">
-                    <img src="https://codehs.com/uploads/8d69896221f14babf95ac9237c7002cc" alt="Screech-Headphones">
-                </a>
-                <a href="https://www.roblox.com/catalog/13593016552/DOORS-Screech-Bag">
-                    <img src="https://codehs.com/uploads/f3ff5698451c03f111702c6c073a3416" alt="Screech-Bag">
-                </a>
-                <a href="https://www.roblox.com/catalog/130134649284486/DOORS-Retro-Screechs-Head">
-                    <img src="https://codehs.com/uploads/5dcc5cd7eb00364346b7780108a005f2" alt="Retro-Screechs-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/105123812349887/DOORS-Retro-Screech">
-                    <img src="https://codehs.com/uploads/5dcc5cd7eb00364346b7780108a005f2" alt="Retro-Screechs-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/10929385535/DOORS-Timothy">
-                    <img src="https://codehs.com/uploads/19d6f083b67c36384fb07b83cc4d0161" alt="Timmothy">
-                </a>
-                <a href="https://www.roblox.com/catalog/10929395514/DOORS-Timothy-Jr">
-                    <img src="https://codehs.com/uploads/ed45b32bc73d9377106df564119a7b9c" alt="Timmothy-Jr">
-                </a>
-                <a href="https://www.roblox.com/catalog/108605693356973/DOORS-Eyes">
-                    <img src="https://codehs.com/uploads/30793fccf68b7ec23f7d9dca378b8f14" alt="Eyes">
-                </a>
-                <a href="https://www.roblox.com/catalog/85529512858646/DOORS-Rush-Mask">
-                    <img src="https://codehs.com/uploads/05a37c4090ec89a8b3ff9bc40bada96a" alt="Rush-Mask">
-                </a>
-                <a href="https://www.roblox.com/catalog/119885108091933/DOORS-Jack-Mask">
-                    <img src="https://codehs.com/uploads/3761ba7071e82aa0db662b0d412113d1" alt="Jack-Mask">
-                </a>
-                <a href="https://www.roblox.com/catalog/97523404857714/DOORS-Rush-Bandana">
-                    <img src="https://codehs.com/uploads/cc2805bc0d32161a1cd93b98ff74115f" alt="Rush-Bandana">
-                </a>
-                <a href="https://www.roblox.com/catalog/98425663998480/DOORS-Gween-Soda-Back">
-                    <img src="https://codehs.com/uploads/72cf83caa597786ca07c4055c76d1932" alt="Gween-Sode-Back">
-                </a>
-                <a href="https://www.roblox.com/catalog/134335871700778/DOORS-Gween-Soda-Face">
-                    <img src="https://codehs.com/uploads/049b5a7389b61a7c15627c315a15e7ff" alt="Gween-Sode-Face">
-                </a>
-                <a href="https://www.roblox.com/catalog/123112679385290/DOORS-Gween-Soda-Waist">
-                    <img src="https://codehs.com/uploads/049b5a7389b61a7c15627c315a15e7ff" alt="Gween-Sode-Waist">
-                </a>
-                <a href="https://www.roblox.com/catalog/109128044615978/DOORS-Door-Plate-0001">
-                    <img src="https://codehs.com/uploads/90e044f578b9255e776b33ce659421d7" alt="Door-Plate-0001">
-                </a>
-                <a href="https://www.roblox.com/catalog/99774395321681/DOORS-Door-Plate-0013">
-                    <img src="https://codehs.com/uploads/7742723c03f49c15697ba3b9e3167e24" alt="Door-Plate-0013">
-                </a>
-                <a href="https://www.roblox.com/catalog/120196630878282/DOORS-Door-Plate-1000">
-                    <img src="https://codehs.com/uploads/db7834d36983537b67faddc558fb5b3c" alt="Door-Plate-1000">
-                </a>
-                <a href="https://www.roblox.com/catalog/14581344044/DOORS-Halt-Cloak">
-                    <img src="https://codehs.com/uploads/97d9f7e82b6f1eba1cc3beb199a9dcc6" alt="Halt-Cloak">
-                </a>
-                <a href="https://www.roblox.com/catalog/12443800992/DOORS-Halt-Cloak-Legacy">
-                    <img src="https://codehs.com/uploads/01783d6bbbd3f8b657d016cfa8307044" alt="Halt-Cloak-Legacy">
-                </a>
-                <a href="https://www.roblox.com/catalog/13584349278/DOORS-Activated-Crucifix">
-                    <img src="https://codehs.com/uploads/2837a4ceb1529bf79954622bc45105cf" alt="Activated-Crucifix">
-                </a>
-                <a href="https://www.roblox.com/catalog/12443766291/DOORS-Jeff-In-Your-Backpack">
-                    <img src="https://codehs.com/uploads/2268a5eaf96e9938baff7dc3b02a12a1" alt="Jeff-In-Your-Backpack">
-                </a>
-                <a href="https://www.roblox.com/catalog/13584320430/DOORS-Jeffs-Tip-Jar-Backpack">
-                    <img src="https://codehs.com/uploads/ebb11326c0bc7bbbc8b8958cfb727793" alt="Jeffs-Tip-Jar-Backpack">
-                </a>
-                <a href="https://www.roblox.com/catalog/138786202190258/DOORS-Knob">
-                    <img src="https://codehs.com/uploads/fd24019029a98ff654fe746598377388" alt="DoorKnob">
-                </a>
-                <a href="https://www.roblox.com/catalog/109928055499333/DOORS-Straplight">
-                    <img src="https://codehs.com/uploads/2f10eedf988d78f06e04eff256d50a72" alt="Straplight">
-                </a>
-                <a href="https://www.roblox.com/catalog/106586778585415/DOORS-Revive-Shoulder-Pal">
-                    <img src="https://codehs.com/uploads/1ef0413909aa58c49b4aaca33efa6560" alt="Revive-Shoulder-Pal">
-                </a>
-            </div>
-            <h1>The Backdoor-The Outdoors-The Archives-UGC</h1>
-            <div class="center-images">
-                <a href="https://www.roblox.com/catalog/125122590760156/DOORS-Blitz-Bandana-Green">
-                    <img src="https://codehs.com/uploads/6f60c7dc96a201972ea5fcab99858e01" alt="Blitz-Bandana-Green">
-                </a>
-                <a href="https://www.roblox.com/catalog/106044385293551/DOORS-Blitz-Bandana-Pink">
-                    <img src="https://codehs.com/uploads/aab1b4c836481e0b8b40dc2d1f6641f0" alt="Blitz-Bandana-Pink">
-                </a>
-                <a href="https://www.roblox.com/catalog/114464111576808/DOORS-Starlight-Jug">
-                    <img src="https://codehs.com/uploads/21bd7b06f9ded8edce2449af11ed5d0d" alt="Starlight-Jug">
-                </a>
-                <a href="https://www.roblox.com/catalog/85683831819790/DOORS-Starlight-Bottle">
-                    <img src="https://codehs.com/uploads/4e062b1a0957412930e913f2c01b08d4" alt="Starlight-Bottle">
-                </a>
-                <a href="https://www.roblox.com/catalog/119243606138173/DOORS-Starlight-Vial">
-                    <img src="https://codehs.com/uploads/663a076bd87d396ed48fdfb445bd4a3a" alt="Starlight-Vial">
-                </a>
-                <a href="https://www.roblox.com/catalog/100056577802564/Pumpkin-Head">
-                    <img src="https://codehs.com/uploads/118822d4d546429ce0bb1a9249c2fac5" alt="Pumpkin-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/73177030628393/Carved-Pumpkin-Head">
-                    <img src="https://codehs.com/uploads/51709a1dee5d9e37509cd6f766379b7c" alt="Carved-Pumpkin-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/93851499165649/Jack-O-Lantern-Head">
-                    <img src="https://codehs.com/uploads/9c5a228fcebd10ece35ed97b7db09e47" alt="Jack-O-Lantern-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/95620587759880/DOORS-The-Groundskeepers-Straw-Hat">
-                    <img src="https://codehs.com/uploads/f6fcf1ce8bfc0b0df06809c5e5aad53f" alt="The-Groundskeepers-Straw-Hat">
-                </a>
-                <a href="https://www.roblox.com/catalog/137399103074768/DOORS-The-Groundskeepers-Head">
-                    <img src="https://codehs.com/uploads/088f9555e9304b4e805a38dd5242f86f" alt="The-Groundskeepers-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/122947915156704/DOORS-The-Groundskeepers-Bandana">
-                    <img src="https://codehs.com/uploads/dbd84a08a573e76b41e2f3462be158b8" alt="Groundskeepers-Bandana">
-                </a>
-                <a href="https://www.roblox.com/catalog/107139765218535/DOORS-The-Groundskeepers-Belt">
-                    <img src="https://codehs.com/uploads/7af5c4b762190f1866ea5c9bfeac47e9" alt="The-Groundskeepers-Belt">
-                </a>
-                <a href="https://www.roblox.com/catalog/133180821468077/DOORS-The-Groundskeepers-Scythe">
-                    <img src="https://codehs.com/uploads/d1cb1a531d62489ee5bc91de6f4a5953" alt="The-Groundskeepers-Scythe">
-                </a>
-                <a href="https://www.roblox.com/catalog/125325114301807/DOORS-The-Groundskeepers-Keys">
-                    <img src="https://codehs.com/uploads/d9792c7b2ddbfc117e229bebba05d798" alt="The-Groundskeepers-Keys">
-                </a>
-                <a href="https://www.roblox.com/catalog/124387378382718/DOORS-Caw-Head">
-                    <img src="https://codehs.com/uploads/70c768192f72e94dd4aa034db0c8acc2" alt="Caw-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/86957159391645/DOORS-Caw-Neck-Feathers">
-                    <img src="https://codehs.com/uploads/8c6f297e3c2322beef896dfb8eea8f2c" alt="Caw-Neck-Feathers">
-                </a>
-                <a href="https://www.roblox.com/catalog/99563752095629/DOORS-Caw-Wings">
-                    <img src="https://codehs.com/uploads/887077a5e0a5f67891d7679d5a4b6fa0" alt="Caw-Wings">
-                </a>
-                <a href="https://www.roblox.com/catalog/116262451186699/DOORS-Caw-Tail-Feathers">
-                    <img src="https://codehs.com/uploads/9e981ed6297edca3756a187adc1d2395" alt="Caw-Tail-Feathers">
-                </a>
-                <a href="https://www.roblox.com/catalog/74190500062256/DOORS-Lotus-On-Your-Back">
-                    <img src="https://codehs.com/uploads/ae8b097eb1316d66792ab74b62fd95a9" alt="Lotus-On-Your-Back">
-                </a>
-                <a href="https://www.roblox.com/catalog/105555317611578/DOORS-Lotus-Lapel">
-                    <img src="https://codehs.com/uploads/a2a2e08f4fe8ffc154c511e479da0048" alt="Lotus-Lapel">
-                </a>
-                <a href="https://www.roblox.com/catalog/134680481893809/DOORS-Lotus-Hairpin">
-                    <img src="https://codehs.com/uploads/1b91dca4c829f35a5257fb1290fe6c4d" alt="Lotus-Hairpin">
-                </a>
-                <a href="https://www.roblox.com/catalog/95371751833477/DOORS-Eyestalk-On-Your-Back">
-                    <img src="https://codehs.com/uploads/c3fe4f6387338ec92b67bd8207a21d7e" alt="Eyestalk-On-Your-Back">
-                </a>
-                <a href="https://www.roblox.com/catalog/121481776135478/DOORS-Mandrake-Leaves">
-                    <img src="https://codehs.com/uploads/3d73230b5954c37342aa6d4367487b15" alt="Mandrake-Leaves">
-                </a>
-                <a href="https://www.roblox.com/catalog/94018792980211/DOORS-Grampys-10-Gallon-Hat">
-                    <img src="https://codehs.com/uploads/c4443d8222bcc9e31470e6381b3e8d55" alt="Grampys-10-Gallon-Hat">
-                </a>
-                <a href="https://www.roblox.com/catalog/76916081097662/DOORS-Grampys-Head">
-                    <img src="https://codehs.com/uploads/7384c5153966ef81da99c3e2b8a2e4cc" alt="Grampys-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/90179165076669/DOORS-Grampys-Scarf">
-                    <img src="https://codehs.com/uploads/61461be85ab78796a71ca5ae9d57e568" alt="Grampys-Scarf">
-                </a>
-                <a href="https://www.roblox.com/catalog/132444242346555/DOORS-Honchos-Face">
-                    <img src="https://codehs.com/uploads/8c839967dbee4471955e46c2d46508a0" alt="Honchos-Face">
-                </a>
-                <a href="https://www.roblox.com/catalog/87276412668465/DOORS-Honchos-Tie">
-                    <img src="https://codehs.com/uploads/e5e7d973602b91a0171f2708282906e9" alt="Honchos-Tie">
-                </a>
-                <a href="https://www.roblox.com/catalog/121564635497602/DOORS-Honchos-Suspenders">
-                    <img src="https://codehs.com/uploads/9c4245aadc818a752baa31f0db95e01e" alt="Honchos-Suspenders">
-                </a>
-                <a href="https://www.roblox.com/catalog/121985487219966/DOORS-Forget-Me-Not-Face">
-                    <img src="https://codehs.com/uploads/88128447a744259e45d7116250f05716" alt="Forget-Me-Not-Face">
-                </a>
-                <a href="https://www.roblox.com/catalog/74002270313522/DOORS-Forget-Me-Not-Back">
-                    <img src="https://codehs.com/uploads/b813dde5ea2db16dadd8c1b246ab72b2" alt="Forget-Me-Not-Back">
-                </a>
-                <a href="https://www.roblox.com/catalog/103423191192413/DOORS-Forget-Me-Not-Infection">
-                    <img src="https://codehs.com/uploads/a6b665eb7a42076226db9a944a4aef9b" alt="Forget-Me-Not-Infection">
-                </a>
-                <a href="https://www.roblox.com/catalog/126635416580036/DOORS-Forget-Me-Not-Hairpin">
-                    <img src="https://codehs.com/uploads/68bbc73c84104698b8d1bcc27af07110" alt="Forget-Me-Not-Hairpin">
-                </a>
-                <a href="https://www.roblox.com/catalog/124651879948169/DOORS-Forget-Me-Not-Lapel">
-                    <img src="https://codehs.com/uploads/516b4de37378652fc383c8f535a53739" alt="Forget-Me-Not-Lapel">
-                </a>
-                <a href="https://www.roblox.com/catalog/95444219086653/DOORS-Tellers-Screen-00">
-                    <img src="https://codehs.com/uploads/450671aa2f7fd2a1826877aa0f0a166e" alt="Tellers-Screen-00">
-                </a>
-                <a href="https://www.roblox.com/catalog/117713741846893/DOORS-Tellers-Screen-01">
-                    <img src="https://codehs.com/uploads/6d7ab7badcac4b773d81c4006cab2de5" alt="Tellers-Screen-01">
-                </a>
-                <a href="https://www.roblox.com/catalog/78190970743629/DOORS-Tellers-Hair">
-                    <img src="https://codehs.com/uploads/06b69e0924cf801d21c3f35ca9446c49" alt="Tellers-Hair">
-                </a>
-                <a href="https://www.roblox.com/catalog/134560315706467/DOORS-Tellers-Head">
-                    <img src="https://codehs.com/uploads/8f6be8d241a2a364e121ce7695bb7f00" alt="Tellers-Head">
-                </a>
-                <a href="https://www.roblox.com/catalog/95090117701594/DOORS-Drone-1s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/c27eae6653cbe4e54536173fc1155551" alt="Drone-1s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/129165511570527/DOORS-Drone-2s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/e94425a36c0fe080515d57172e5f7ef2" alt="Drone-2s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/87447545674396/DOORS-Drone-3s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/1a5b1bdda41727fd63b969152c65fe75" alt="Drone-3s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/115709963792171/DOORS-Drone-4s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/35b154f86eeebd805360e2ae96693502" alt="Drone-4s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/110662151470787/DOORS-Drone-5s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/28c666231b65d5eed00a287a72119747" alt="Drone-5s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/117057453607324/DOORS-Drone-6s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/a8e2e4ed8513113b7a58256d4f4870aa" alt="Drone-6s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/76583874224937/DOORS-Drone-7s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/83e8e4c0f76e93d3923f5b0554c53611" alt="Drone-7s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/129638172531780/DOORS-Drone-8s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/4c8728f2eafb5b4b4d6321dc4e11218d" alt="Drone-8s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/139178775497926/DOORS-Drone-9s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/22326ab45a3bac84435cdbcb3b4222fe" alt="Drone-9s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/133453450138992/DOORS-Drone-10s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/8f35406be17a9a209518817689837873" alt="Drone-10s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/87206932626575/DOORS-Drone-11s-Sticky-Notes">
-                    <img src="https://codehs.com/uploads/e15b315d558faafa5ce89d64013a8751" alt="Drone-11s-Sticky-Notes">
-                </a>
-                <a href="https://www.roblox.com/catalog/13584293197/DOORS-Ransom">
-                    <img src="https://codehs.com/uploads/bff6598e97597c8ded2e3612b0f75bca" alt="Ransom">
-                </a>
-                <a href="https://www.roblox.com/catalog/98944470341949/DOORS-Portraits-Head">
-                    <img src="https://codehs.com/uploads/8fa219f5d1177d843dcfac14eb36f46e" alt="Portraits-Head">
-                </a>
-            </div>
-    <h1>DOORS Game Passes</h1>
-    <div class="center-images">
-        <a href="https://www.roblox.com/game-pass/972013377/ADMIN-PANEL">
-            <img src="https://codehs.com/uploads/55e56ec1a88a5657e10bb2db72724c6f" alt="ADMIN-PANEL">
-        </a>
-        <a href="https://www.roblox.com/game-pass/1640556449/KITTY-BUNDLE">
-            <img src="https://codehs.com/uploads/2e1ea20bc2f910802d1d93fa8e7722bb" alt="KITTY-BUNDLE">
-        </a>
-    </div>
-    <h1>Follow And Join My Stuff</h1>
-    <div class="center-images">
-        <a href="https://www.roblox.com/users/4173739403/profile">
-            <img class="roblox-avatar"
-                 data-roblox-user-id="4173739403"
-                 src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=4173739403&size=150x150&format=Png&isCircular=false&thumbnailType=HeadShot"
-             alt="Dinosaurgodn">
-        </a>
-        <a href="https://www.roblox.com/communities/32006503/Dinosaurgodns-group#!/about">
-            <img src="https://codehs.com/uploads/eb8962dfa110c7f83dc867882eb8574b" alt="Roblox Community">
-        </a>
-        <a href="https://www.youtube.com/@Dinosaurgodn">
-            <img id="DiffrentSize10"src="https://codehs.com/uploads/44ca8e4bfc21f71c9bb7325cc70a53f6" alt="YouTube">
-        </a>
-        <a href="https://www.instagram.com/dinosaurgodn/">
-            <img src="https://codehs.com/uploads/6b0296705f2e6c9960f2de118b3845b6" alt="Instagram">
-        </a>
-        <a href="https://discord.gg/MbtWuYZa8F">
-            <img id="DiffrentSize1"src="https://codehs.com/uploads/65ae9c3b88472bdee63ba419c7cb0e19" alt="Discord">
-        </a>
-        <a href="https://x.com/Dinosaurgodn">
-            <img src="https://codehs.com/uploads/87f15e5f510f8c6cbbbbeb7eda9202e0" alt="Twitter">
-        </a>
-        <a href="https://www.twitch.tv/dinosaurgodn">
-            <img src="https://codehs.com/uploads/203e3efb2d7d5d0e01056d391af21bbd" alt="Twitch">
+            <img
+                class="roblox-avatar"
+                data-roblox-user-id="109282935"
+                src="https://www.roblox.com/headshot-thumbnail/image?userId=109282935&width=150&height=150&format=png"
+                alt="ellieflopper">
         </a>
     </div>
 
-    <footer class="footer">
-        <h1>Thanks For Scrolling This Far! :D</h1>
-    </footer>
+</div>
 
-    <script>
-    (async function updateRobloxAvatars() {
-        const avatarImages = document.querySelectorAll("[data-roblox-user-id]");
-        if (!avatarImages.length) return;
+<!-- =========================
+     ALL DOORS ICONS
+     ========================= -->
 
-        const userIds = [...avatarImages].map(img =>
-            img.getAttribute("data-roblox-user-id")
+<h1>All DOORS Icons</h1>
+
+<div class="center-images">
+
+    <a href="https://doorsgame.wiki/wiki/Alpha_Release">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/19e00f2ac4d9244d727b372edd704f74"
+             alt="DOORS-Release-Icon">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/2023_April_Fools_Event">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/ab171c34bd7582c6d7aab3ff594673a9"
+             alt="DOORS-April-Fools-2023-Icon">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/The_Hotel%2B_Update">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/3aee3b5fbfa0b0b26cfe66ebb086443b"
+             alt="DOORS-Hotel-+-Update-Icon">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/Modifiers">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/eacee788ab8b85804788b0c59d6089a1"
+             alt="DOORS-Modifiers-Icon">
+    </a>
+
+    <a href="https://roblox-doors.fandom.com/wiki/DOORS">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/bd76ea042141de92f919f56c982d3a74"
+             alt="DOORS">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/The_Hunt_Update">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/7fa449c980277246943a61fb1af1923b"
+             alt="DOORS-The-Hunt-Event-Icon">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/The_Backdoor">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/0331ca996989a4a52bed177d5a7b6f6b"
+             alt="DOORS-The-Backdoor-Update-Icon">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/2024_April_Fools_Event">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/9d2707a935facc5609e68c6bf7677a15"
+             alt="DOORS-April-Fools-2024-Icon">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/The_Mines">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/d9bee144bd727b123886908442c43e7a"
+             alt="DOORS-The-Mines-Update-Icon">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/2024_Trick_Or_Treat_Event">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/7038fb550ff410ea9b25811ac18e2a8e"
+             alt="Trick-Or-Treat">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/The_Content_Update">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/d07290c1d8f4b30c580f65eb36ca7595"
+             alt="DOORS-The-Content-Update-Icon">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/2025_April_Fools_Event">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/f47d998eb39b02c1dd531a1337dab65a"
+             alt="DOORS-Ranked-Mode-Update-Icon">
+    </a>
+
+    <a href="https://roblox-doors.fandom.com/wiki/DOORS">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/aef3c5ac4cc97664c7739a3ea09efbc6"
+             alt="DOORS">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/The_Outdoors">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/3f93d6452cf04bfa4101559494298541"
+             alt="The-Out-DOORS">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/Battle_Mode">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/008aeeb94da571e3622c58ee78a71fdb"
+             alt="Battle-Mode">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/The_Halloween_Spotlight_Event">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/3e7e9d13d7102ff2c446605f762d88dc"
+             alt="Trick-Or-Treat">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/492f3b338092892b768e699ab4215d0d"
+             alt="Chrismas">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/b5ac0c3d6978041d0d39c5ea69d4263f"
+             alt="Cringles-Workshop">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/e0e3a7483a1eaf03b93f7211b8e76a30"
+             alt="Daily-Runs">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/a6fba21a03e3d7752098358683708b98"
+             alt="CHAOS-MODE 🌌">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/ae7e4f0cf40066f17321759a335409cd"
+             alt="rush-mode-endless-mode">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize13"
+             src="https://codehs.com/uploads/10645b5175044e96d92a053f0f16cc50"
+             alt="The-Archives">
+    </a>
+
+</div>
+
+<!-- =========================
+     ALL DOORS GAME THUMBNAILS
+     ========================= -->
+
+<h1>All DOORS Game Thumbnails</h1>
+
+<div class="center-images">
+
+    <a href="https://doorsgame.wiki/wiki/Alpha_Release">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/aa5e4fbc1f2a2d3c09bb0e232356fae8"
+             alt="DOORS-Release">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/33183fdfad542b8c51d5adb82dc8b5b0"
+             alt="DOORS-April-Fools-2023">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/983b91bfb9513a7cb4823f613e3f994c"
+             alt="DOORS-Hotel+-Update">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/Modifiers">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/9979fabc1cacf10e1f250cb64e88aaa4"
+             alt="DOORS-Modifiers">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/The_Hunt_Update">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/3cc4f9f9caba92adb602c2233027977e"
+             alt="DOORS-The-Hunt-Event-Icon">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/02b20454e63c10998e8fbff0647726dc"
+             alt="DOORS-Backdoor-Update">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/794c9a590288e4d03a788f37b798ca2f"
+             alt="DOORS-April-Fools-2024">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/63c1aa225dc412a189501df4665c3d3c"
+             alt="DOORS-Floor-2-Update">
+    </a>
+
+    <a href="https://doors-game.fandom.com/wiki/2024_Trick_Or_Treat_Event">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/6005cc898fcd7635282b0506650521e1"
+             alt="Trick-Or-Treat">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/ad4a3846ee1332ed0c9ee810d2c93885"
+             alt="DOORS-Content-Update">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/46551d0076d074e93692e5374c10151c"
+             alt="DOORS-Rush-Normal">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/bc31e1ba34b4ec22001ca5490ba3168d"
+             alt="DOORS-Rush-Blue">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/a8252732048add28b2a508bfd30eb5b5"
+             alt="DOORS-Lobby-Front-Doors">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/a86ab187bb1625ac3d7945081e1a2a50"
+             alt="DOORS-Lobby-Back-Fire-Place">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/df81df1d35adf2aaa3d96c672a422a59"
+             alt="DOORS-Spawn-Room">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/daf00a9f7e93b42435ea120467543c5e"
+             alt="DOORS-Seek-Door-13">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/5b05ae26cc2080e4be83d03c91c7e5cf"
+             alt="DOORS-April-Fools-2025">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/a79d2321981985665826ab808439d8b2"
+             alt="DOORS-The-Out-DOORS">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/145e8243f8267e9c2ca121533b6c16d3"
+             alt="DOORS-Battle-Mode">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/ce4ef06074c7cc42495c11cdf2b10dbf"
+             alt="DOORS-Trick-Or-Treat">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/0e225af6c832c803af3076e00309246a"
+             alt="DOORS-Chrismas">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/760f116fda8311609b3f4f9a31a9e63e"
+             alt="DOORS-Cringles-Workshop">
+    </a>
+
+    <a href="https://www.roblox.com/games/6516141723/DOORS">
+        <img id="DiffrentSize6"
+             src="https://codehs.com/uploads/372d7552e3b62224b09fde87341a15cf"
+             alt="DOORS-The-Archives">
+    </a>
+
+</div>
+
+<!-- =========================
+     DOORS UPDATE TRAILERS
+     ========================= -->
+
+<h1>DOORS Update Trailers</h1>
+
+<div class="center-images">
+
+    <a href="https://www.youtube.com/watch?v=me_w3eDtYRo&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/b54309c4f12ef771bc86086ca9917246"
+             alt="DOORS-Coming-Soon-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=XBNL6Rq13Ho&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=2">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/aa5e4fbc1f2a2d3c09bb0e232356fae8"
+             alt="DOORS-Release-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=p7NKqVJzH4E&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=3">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/b607a7ee19df15a6f9bf715126d105c1"
+             alt="DOORS-Exctendid-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=t0NAJqAS9qM&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=4">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/8ddef8643be88b3889a86a4fafb19af7"
+             alt="DOORS-Hotel+-Sneak-Peak-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=bSTo-0M9Mjg&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=5">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/415554ad7c136e3a20d0bcda05a9e06e"
+             alt="DOORS-Hotel+-Teaser-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=IlVShjKur0I&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=6">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/983b91bfb9513a7cb4823f613e3f994c"
+             alt="DOORS-Hotel+-Full-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=6w-e50dXZ_s&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=7">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/855d1e82186a34e400dc516d08e3c25b"
+             alt="DOORS-Modifiers-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=ZU0owH2nxGk&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=8">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/1f760c70bd3d3d4565262c29dfa17a7b"
+             alt="DOORS-The-Hunt-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=6wacCUMyePI&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=9">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/d9be4bcd45252b8d10d5424587ef647c"
+             alt="DOORS-Floor-2-Sneak-Peak-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=2BReqL3E5f4&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=10">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/92ed8311d031ce9c40610bee2261dd33"
+             alt="DOORS-Floor-2-Teaser-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=-irDHCt-bug&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=11">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/125e90982c7ae8144d5ed9ccdd621bfe"
+             alt="DOORS-Floor-2-Release-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=me_w3eDtYRo&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/ad4a3846ee1332ed0c9ee810d2c93885"
+             alt="DOORS-Content-Update-Trailer">
+    </a>
+
+    <a href="https://x.com/DoorsRoblox/status/1895652250363785385">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/dd5cb3c479c68617088513f3e1987875"
+             alt="DOORS-Garden-Subfloor-Teaser">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=4HNcM8bCUVk">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/81d2fc25230e9aa7db7ee14c1170731b"
+             alt="DOORS-The-Out-Door-Teaser-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=ZiETzDala9Y&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=16">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/8c9898f4be2b3fbd73e02d5ba79d2214"
+             alt="DOORS-The-Out-Door-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=PxB3MmN_-mo">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/8cae7898bb95432e1ef5d8c51cc0a1ac"
+             alt="DOORS-Cringles-Workshop-Trailer">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=nI4r0eOxLmU">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/b76bc239ee92f97f1e08df091da593e8"
+             alt="DOORS-Archives-Trailer-1">
+    </a>
+
+    <a href="https://www.youtube.com/shorts/8zvux23jT4Q">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/405d86fcbcf8b0860306f4e798a6caf2"
+             alt="DOORS-Archives-Teaser-1">
+    </a>
+
+    <a href="https://www.youtube.com/shorts/V7dnavBi0zk">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/24ca4b7743d36498ece80447c729a107"
+             alt="DOORS-Archives-Teaser-2">
+    </a>
+
+    <a href="https://www.youtube.com/shorts/gycUTcW8fzY">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/bb237cbcef000247dc4c6f603881629e"
+             alt="DOORS-Archives-Teaser-3">
+    </a>
+
+    <a href="https://www.youtube.com/shorts/080eRdfUEDo">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/edee5b910b1257dbed7c6519fff3143e"
+             alt="DOORS-Archives-Teaser-4">
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=jCSv6L7fov8&list=PLjG-JFVpFydYDTMueJRdaLZuQizQuFXw0&index=23">
+        <img id="DiffrentSize12"
+             src="https://codehs.com/uploads/c5a5cc9d76375b023810e50aba157741"
+             alt="DOORS-Archives-Trailer-2">
+    </a>
+
+</div>
+
+<!-- =========================
+     DOORS UGC
+     ========================= -->
+
+<h1>DOORS-UGC</h1>
+
+<div class="center-images">
+
+    <a href="https://www.roblox.com/catalog/126247458615142/DOORS-Doors-Mans-Beanie">
+        <img
+            src="https://codehs.com/uploads/632ff54f476c1b81cb1097a61ef5ab1f"
+            alt="Doors-Mans-Beanie">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/110102774584171/DOORS-Doors-Mans-Studs">
+        <img
+            src="https://codehs.com/uploads/1d4312034e73fa226a886481baa546df"
+            alt="Doors-Mans-Studs">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/131178144447181/DOORS-Doors-Mans-Stubble">
+        <img
+            src="https://codehs.com/uploads/b0c9e5599877b1ce86e161fd67e79cc7"
+            alt="Doors-Mans-Stubble">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/93505697394817/DOORS-Doors-Mans-Collar">
+        <img
+            src="https://codehs.com/uploads/f816d8d500d95592b862ef03029dad1f"
+            alt="Doors-Mans-Collar">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/120517971149022/DOORS-Doors-Mans-Cross-Necklace">
+        <img
+            src="https://codehs.com/uploads/efe1f1952560720558b95a757c915e76"
+            alt="Doors-Mans-Cross-Necklace">
+    </a>
+
+</div>
+
+<!-- =========================
+     HOTEL MINES UGC
+     ========================= -->
+
+<h1>Hotel-Mines-UGC</h1>
+
+<div class="center-images">
+
+    <a href="https://www.roblox.com/catalog/103648094771267/DOORS-Gloombat-Head-Blue">
+        <img src="https://codehs.com/uploads/b9a8962ef79d679e9544717f1d3bc273"
+             alt="Gloombat-Head-Blue">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/132875400161342/DOORS-Gloombat-Wings-Blue">
+        <img src="https://codehs.com/uploads/c1945f786b681b105f4541732bb8f127"
+             alt="Gloombat-Wings-Blue">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/125712343221673/DOORS-Gloombat-Head-Red">
+        <img src="https://codehs.com/uploads/8482aa680cd4363054330aae44a4166d"
+             alt="Gloombat-Head-Red">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/131706360509237/DOORS-Gloombat-Wings-Red">
+        <img src="https://codehs.com/uploads/12955db6371230d4b114f8296fa2c304"
+             alt="Gloombat-Wings-Red">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/116441720310033/DOORS-Gloombat-Head-Yellow">
+        <img src="https://codehs.com/uploads/c461bedaad1659f650c289058a8440ca"
+             alt="Gloombat-Head-Yellow">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/126740061882403/DOORS-Gloombat-Wings-Yellow">
+        <img src="https://codehs.com/uploads/a906316cacaecc16a98997f7e1077171"
+             alt="Gloombat-Wings-Yellow">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/98522432200530/DOORS-Gloombat-Head-Green">
+        <img src="https://codehs.com/uploads/496d6920c5a5f41788234530e2113ad4"
+             alt="Gloombat-Head-Green">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/78317126202695/DOORS-Gloombat-Wings-Green">
+        <img src="https://codehs.com/uploads/97be71a7eee0b415b0fb537827fe76e0"
+             alt="Gloombat-Wings-Green">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/95322747130060/DOORS-Gloombat-Head-Purple">
+        <img src="https://codehs.com/uploads/069d2372a5138c43056e70fec2f95038"
+             alt="Gloombat-Head-Purple">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/101936983593715/DOORS-Gloombat-Wings-Purple">
+        <img src="https://codehs.com/uploads/b1341204689a4d63f746ccfc3455b591"
+             alt="Gloombat-Wings-Purple">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/109574835861882/DOORS-Sallys-Head">
+        <img src="https://codehs.com/uploads/c042a7903f4e2bcf6f583ea246dc348c"
+             alt="Sallys-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/100462715155558/DOORS-Sallys-Head-Happy">
+        <img src="https://codehs.com/uploads/7fa0f6cf57943a802abd812561c5b33c"
+             alt="Sallys-Head-Happy">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/122523409505875/DOORS-Sallys-Skirt">
+        <img src="https://codehs.com/uploads/5c53a5059f2e959ae028d16740456409"
+             alt="Sallys-Skirt">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/127312864891006/DOORS-Louies-Head">
+        <img src="https://codehs.com/uploads/4937531222357835deacfeefa9803fe2"
+             alt="Louies-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/122065996117904/DOORS-Louies-Tail">
+        <img src="https://codehs.com/uploads/73778ef598491e8005d349b40bc1f820"
+             alt="Louies-Tail">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/78982251129107/DOORS-Louie">
+        <img src="https://codehs.com/uploads/125abbc91449861fd7c4f16757a07133"
+             alt="Louie">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/100154817667791/DOORS-Marble-Halo">
+        <img src="https://codehs.com/uploads/03f3f8cce6bf34e7238a4da7794b6910"
+             alt="Marble-Halo">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/79124868270890/DOORS-Marble-Wings">
+        <img src="https://codehs.com/uploads/9ac7eff83e6a716d8b4d3175d2a82a5d"
+             alt="Marble-Wings">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/13592957690/DOORS-Figures-Head">
+        <img src="https://codehs.com/uploads/16c97def91e7aa0b3ad1df0ab7f11b5c"
+             alt="Figures-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/13593732633/DOORS-Figures-Ribcage">
+        <img src="https://codehs.com/uploads/686e13489bce8f61cb69c99bfcac3dee"
+             alt="Figures-Ribcage">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/10929376540/DOORS-Figure-Hood">
+        <img src="https://codehs.com/uploads/7b15ef07e470cc812a24cbd3acb0730a"
+             alt="Figure-Hood">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/13592562492/DOORS-Figure-Headphones">
+        <img src="https://codehs.com/uploads/ac381cc03a138ef659665ae05eb7a4ed"
+             alt="Figure-HeadPhones">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/12443786026/DOORS-El-Goblinos-Head">
+        <img src="https://codehs.com/uploads/cd51f91f59e86b65bd6fd5a144fd7a2e"
+             alt="El-Goblinos-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/12443751080/DOORS-El-Goblino">
+        <img src="https://codehs.com/uploads/b4391718b6e1b3d42d4f74a7b22f1007"
+             alt="El-Goblino">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/12443794241/DOORS-El-Goblinos-Tail">
+        <img src="https://codehs.com/uploads/bee9d97f190b456d7dd748dcd1955f9a"
+             alt="El-Goblino-Tail">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/14581277349/DOORS-Seeks-Eye">
+        <img src="https://codehs.com/uploads/073f9568294851e41356efc48f83dddb"
+             alt="Seeks-Eye">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/14581287066/DOORS-Seeks-Eye">
+        <img src="https://codehs.com/uploads/d94262001cdcb0a527adf91ce7d45210"
+             alt="Seeks-Eye">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/10929342405/DOORS-Seeks-Eye-Legacy">
+        <img src="https://codehs.com/uploads/8ef72e4d6f7f3ed514ad9752e2b3a9c4"
+             alt="Seeks-Eye-Legacy">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/13592558317/DOORS-Seek-Headphones">
+        <img src="https://codehs.com/uploads/9112ffabff5203f7f8b0438db89ad82c"
+             alt="Seek-Headphones">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/13584304105/DOORS-Seeks-New-Whip">
+        <img src="https://codehs.com/uploads/a066853f8dcdc18ac050df31a796c0b7"
+             alt="Seeks-New-Whip">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/14581331878/DOORS-Screechs-Head">
+        <img src="https://codehs.com/uploads/67fa740e61f96fe482cde4f06580a516"
+             alt="Screech-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/10976430733/DOORS-Screech-Mask">
+        <img src="https://codehs.com/uploads/8fd3c3c95bcf306d853f655cf397cb88"
+             alt="Screech-Hoodie">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/13584359316/DOORS-Screech-Headphones">
+        <img src="https://codehs.com/uploads/8d69896221f14babf95ac9237c7002cc"
+             alt="Screech-Headphones">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/13593016552/DOORS-Screech-Bag">
+        <img src="https://codehs.com/uploads/f3ff5698451c03f111702c6c073a3416"
+             alt="Screech-Bag">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/130134649284486/DOORS-Retro-Screechs-Head">
+        <img src="https://codehs.com/uploads/5dcc5cd7eb00364346b7780108a005f2"
+             alt="Retro-Screechs-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/105123812349887/DOORS-Retro-Screech">
+        <img src="https://codehs.com/uploads/5dcc5cd7eb00364346b7780108a005f2"
+             alt="Retro-Screechs-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/10929385535/DOORS-Timothy">
+        <img src="https://codehs.com/uploads/19d6f083b67c36384fb07b83cc4d0161"
+             alt="Timmothy">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/10929395514/DOORS-Timothy-Jr">
+        <img src="https://codehs.com/uploads/ed45b32bc73d9377106df564119a7b9c"
+             alt="Timmothy-Jr">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/108605693356973/DOORS-Eyes">
+        <img src="https://codehs.com/uploads/30793fccf68b7ec23f7d9dca378b8f14"
+             alt="Eyes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/85529512858646/DOORS-Rush-Mask">
+        <img src="https://codehs.com/uploads/05a37c4090ec89a8b3ff9bc40bada96a"
+             alt="Rush-Mask">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/119885108091933/DOORS-Jack-Mask">
+        <img src="https://codehs.com/uploads/3761ba7071e82aa0db662b0d412113d1"
+             alt="Jack-Mask">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/97523404857714/DOORS-Rush-Bandana">
+        <img src="https://codehs.com/uploads/cc2805bc0d32161a1cd93b98ff74115f"
+             alt="Rush-Bandana">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/98425663998480/DOORS-Gween-Soda-Back">
+        <img src="https://codehs.com/uploads/72cf83caa597786ca07c4055c76d1932"
+             alt="Gween-Sode-Back">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/134335871700778/DOORS-Gween-Soda-Face">
+        <img src="https://codehs.com/uploads/049b5a7389b61a7c15627c315a15e7ff"
+             alt="Gween-Sode-Face">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/123112679385290/DOORS-Gween-Soda-Waist">
+        <img src="https://codehs.com/uploads/049b5a7389b61a7c15627c315a15e7ff"
+             alt="Gween-Sode-Waist">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/109128044615978/DOORS-Door-Plate-0001">
+        <img src="https://codehs.com/uploads/90e044f578b9255e776b33ce659421d7"
+             alt="Door-Plate-0001">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/99774395321681/DOORS-Door-Plate-0013">
+        <img src="https://codehs.com/uploads/7742723c03f49c15697ba3b9e3167e24"
+             alt="Door-Plate-0013">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/120196630878282/DOORS-Door-Plate-1000">
+        <img src="https://codehs.com/uploads/db7834d36983537b67faddc558fb5b3c"
+             alt="Door-Plate-1000">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/14581344044/DOORS-Halt-Cloak">
+        <img src="https://codehs.com/uploads/97d9f7e82b6f1eba1cc3beb199a9dcc6"
+             alt="Halt-Cloak">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/12443800992/DOORS-Halt-Cloak-Legacy">
+        <img src="https://codehs.com/uploads/01783d6bbbd3f8b657d016cfa8307044"
+             alt="Halt-Cloak-Legacy">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/13584349278/DOORS-Activated-Crucifix">
+        <img src="https://codehs.com/uploads/2837a4ceb1529bf79954622bc45105cf"
+             alt="Activated-Crucifix">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/12443766291/DOORS-Jeff-In-Your-Backpack">
+        <img src="https://codehs.com/uploads/2268a5eaf96e9938baff7dc3b02a12a1"
+             alt="Jeff-In-Your-Backpack">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/13584320430/DOORS-Jeffs-Tip-Jar-Backpack">
+        <img src="https://codehs.com/uploads/ebb11326c0bc7bbbc8b8958cfb727793"
+             alt="Jeffs-Tip-Jar-Backpack">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/138786202190258/DOORS-Knob">
+        <img src="https://codehs.com/uploads/fd24019029a98ff654fe746598377388"
+             alt="DoorKnob">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/109928055499333/DOORS-Straplight">
+        <img src="https://codehs.com/uploads/2f10eedf988d78f06e04eff256d50a72"
+             alt="Straplight">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/106586778585415/DOORS-Revive-Shoulder-Pal">
+        <img src="https://codehs.com/uploads/1ef0413909aa58c49b4aaca33efa6560"
+             alt="Revive-Shoulder-Pal">
+    </a>
+
+</div>
+
+<!-- =========================
+     BACKDOOR / OUTDOORS / ARCHIVES UGC
+     ========================= -->
+
+<h1>The Backdoor-The Outdoors-The Archives-UGC</h1>
+
+<div class="center-images">
+
+    <a href="https://www.roblox.com/catalog/125122590760156/DOORS-Blitz-Bandana-Green">
+        <img src="https://codehs.com/uploads/6f60c7dc96a201972ea5fcab99858e01"
+             alt="Blitz-Bandana-Green">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/106044385293551/DOORS-Blitz-Bandana-Pink">
+        <img src="https://codehs.com/uploads/aab1b4c836481e0b8b40dc2d1f6641f0"
+             alt="Blitz-Bandana-Pink">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/114464111576808/DOORS-Starlight-Jug">
+        <img src="https://codehs.com/uploads/21bd7b06f9ded8edce2449af11ed5d0d"
+             alt="Starlight-Jug">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/85683831819790/DOORS-Starlight-Bottle">
+        <img src="https://codehs.com/uploads/4e062b1a0957412930e913f2c01b08d4"
+             alt="Starlight-Bottle">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/119243606138173/DOORS-Starlight-Vial">
+        <img src="https://codehs.com/uploads/663a076bd87d396ed48fdfb445bd4a3a"
+             alt="Starlight-Vial">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/100056577802564/Pumpkin-Head">
+        <img src="https://codehs.com/uploads/118822d4d546429ce0bb1a9249c2fac5"
+             alt="Pumpkin-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/73177030628393/Carved-Pumpkin-Head">
+        <img src="https://codehs.com/uploads/51709a1dee5d9e37509cd6f766379b7c"
+             alt="Carved-Pumpkin-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/93851499165649/Jack-O-Lantern-Head">
+        <img src="https://codehs.com/uploads/9c5a228fcebd10ece35ed97b7db09e47"
+             alt="Jack-O-Lantern-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/95620587759880/DOORS-The-Groundskeepers-Straw-Hat">
+        <img src="https://codehs.com/uploads/f6fcf1ce8bfc0b0df06809c5e5aad53f"
+             alt="The-Groundskeepers-Straw-Hat">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/137399103074768/DOORS-The-Groundskeepers-Head">
+        <img src="https://codehs.com/uploads/088f9555e9304b4e805a38dd5242f86f"
+             alt="The-Groundskeepers-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/122947915156704/DOORS-The-Groundskeepers-Bandana">
+        <img src="https://codehs.com/uploads/dbd84a08a573e76b41e2f3462be158b8"
+             alt="Groundskeepers-Bandana">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/107139765218535/DOORS-The-Groundskeepers-Belt">
+        <img src="https://codehs.com/uploads/7af5c4b762190f1866ea5c9bfeac47e9"
+             alt="The-Groundskeepers-Belt">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/133180821468077/DOORS-The-Groundskeepers-Scythe">
+        <img src="https://codehs.com/uploads/d1cb1a531d62489ee5bc91de6f4a5953"
+             alt="The-Groundskeepers-Scythe">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/125325114301807/DOORS-The-Groundskeepers-Keys">
+        <img src="https://codehs.com/uploads/d9792c7b2ddbfc117e229bebba05d798"
+             alt="The-Groundskeepers-Keys">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/124387378382718/DOORS-Caw-Head">
+        <img src="https://codehs.com/uploads/70c768192f72e94dd4aa034db0c8acc2"
+             alt="Caw-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/86957159391645/DOORS-Caw-Neck-Feathers">
+        <img src="https://codehs.com/uploads/8c6f297e3c2322beef896dfb8eea8f2c"
+             alt="Caw-Neck-Feathers">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/99563752095629/DOORS-Caw-Wings">
+        <img src="https://codehs.com/uploads/887077a5e0a5f67891d7679d5a4b6fa0"
+             alt="Caw-Wings">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/116262451186699/DOORS-Caw-Tail-Feathers">
+        <img src="https://codehs.com/uploads/9e981ed6297edca3756a187adc1d2395"
+             alt="Caw-Tail-Feathers">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/74190500062256/DOORS-Lotus-On-Your-Back">
+        <img src="https://codehs.com/uploads/ae8b097eb1316d66792ab74b62fd95a9"
+             alt="Lotus-On-Your-Back">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/105555317611578/DOORS-Lotus-Lapel">
+        <img src="https://codehs.com/uploads/a2a2e08f4fe8ffc154c511e479da0048"
+             alt="Lotus-Lapel">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/134680481893809/DOORS-Lotus-Hairpin">
+        <img src="https://codehs.com/uploads/1b91dca4c829f35a5257fb1290fe6c4d"
+             alt="Lotus-Hairpin">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/95371751833477/DOORS-Eyestalk-On-Your-Back">
+        <img src="https://codehs.com/uploads/c3fe4f6387338ec92b67bd8207a21d7e"
+             alt="Eyestalk-On-Your-Back">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/121481776135478/DOORS-Mandrake-Leaves">
+        <img src="https://codehs.com/uploads/3d73230b5954c37342aa6d4367487b15"
+             alt="Mandrake-Leaves">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/94018792980211/DOORS-Grampys-10-Gallon-Hat">
+        <img src="https://codehs.com/uploads/c4443d8222bcc9e31470e6381b3e8d55"
+             alt="Grampys-10-Gallon-Hat">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/76916081097662/DOORS-Grampys-Head">
+        <img src="https://codehs.com/uploads/7384c5153966ef81da99c3e2b8a2e4cc"
+             alt="Grampys-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/90179165076669/DOORS-Grampys-Scarf">
+        <img src="https://codehs.com/uploads/61461be85ab78796a71ca5ae9d57e568"
+             alt="Grampys-Scarf">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/132444242346555/DOORS-Honchos-Face">
+        <img src="https://codehs.com/uploads/8c839967dbee4471955e46c2d46508a0"
+             alt="Honchos-Face">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/87276412668465/DOORS-Honchos-Tie">
+        <img src="https://codehs.com/uploads/e5e7d973602b91a0171f2708282906e9"
+             alt="Honchos-Tie">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/121564635497602/DOORS-Honchos-Suspenders">
+        <img src="https://codehs.com/uploads/9c4245aadc818a752baa31f0db95e01e"
+             alt="Honchos-Suspenders">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/121985487219966/DOORS-Forget-Me-Not-Face">
+        <img src="https://codehs.com/uploads/88128447a744259e45d7116250f05716"
+             alt="Forget-Me-Not-Face">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/74002270313522/DOORS-Forget-Me-Not-Back">
+        <img src="https://codehs.com/uploads/b813dde5ea2db16dadd8c1b246ab72b2"
+             alt="Forget-Me-Not-Back">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/103423191192413/DOORS-Forget-Me-Not-Infection">
+        <img src="https://codehs.com/uploads/a6b665eb7a42076226db9a944a4aef9b"
+             alt="Forget-Me-Not-Infection">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/126635416580036/DOORS-Forget-Me-Not-Hairpin">
+        <img src="https://codehs.com/uploads/68bbc73c84104698b8d1bcc27af07110"
+             alt="Forget-Me-Not-Hairpin">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/124651879948169/DOORS-Forget-Me-Not-Lapel">
+        <img src="https://codehs.com/uploads/516b4de37378652fc383c8f535a53739"
+             alt="Forget-Me-Not-Lapel">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/95444219086653/DOORS-Tellers-Screen-00">
+        <img src="https://codehs.com/uploads/450671aa2f7fd2a1826877aa0f0a166e"
+             alt="Tellers-Screen-00">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/117713741846893/DOORS-Tellers-Screen-01">
+        <img src="https://codehs.com/uploads/6d7ab7badcac4b773d81c4006cab2de5"
+             alt="Tellers-Screen-01">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/78190970743629/DOORS-Tellers-Hair">
+        <img src="https://codehs.com/uploads/06b69e0924cf801d21c3f35ca9446c49"
+             alt="Tellers-Hair">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/134560315706467/DOORS-Tellers-Head">
+        <img src="https://codehs.com/uploads/8f6be8d241a2a364e121ce7695bb7f00"
+             alt="Tellers-Head">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/95090117701594/DOORS-Drone-1s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/c27eae6653cbe4e54536173fc1155551"
+             alt="Drone-1s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/129165511570527/DOORS-Drone-2s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/e94425a36c0fe080515d57172e5f7ef2"
+             alt="Drone-2s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/87447545674396/DOORS-Drone-3s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/1a5b1bdda41727fd63b969152c65fe75"
+             alt="Drone-3s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/115709963792171/DOORS-Drone-4s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/35b154f86eeebd805360e2ae96693502"
+             alt="Drone-4s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/110662151470787/DOORS-Drone-5s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/28c666231b65d5eed00a287a72119747"
+             alt="Drone-5s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/117057453607324/DOORS-Drone-6s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/a8e2e4ed8513113b7a58256d4f4870aa"
+             alt="Drone-6s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/76583874224937/DOORS-Drone-7s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/83e8e4c0f76e93d3923f5b0554c53611"
+             alt="Drone-7s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/129638172531780/DOORS-Drone-8s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/4c8728f2eafb5b4b4d6321dc4e11218d"
+             alt="Drone-8s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/139178775497926/DOORS-Drone-9s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/22326ab45a3bac84435cdbcb3b4222fe"
+             alt="Drone-9s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/133453450138992/DOORS-Drone-10s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/8f35406be17a9a209518817689837873"
+             alt="Drone-10s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/87206932626575/DOORS-Drone-11s-Sticky-Notes">
+        <img src="https://codehs.com/uploads/e15b315d558faafa5ce89d64013a8751"
+             alt="Drone-11s-Sticky-Notes">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/13584293197/DOORS-Ransom">
+        <img src="https://codehs.com/uploads/bff6598e97597c8ded2e3612b0f75bca"
+             alt="Ransom">
+    </a>
+
+    <a href="https://www.roblox.com/catalog/98944470341949/DOORS-Portraits-Head">
+        <img src="https://codehs.com/uploads/8fa219f5d1177d843dcfac14eb36f46e"
+             alt="Portraits-Head">
+    </a>
+
+</div>
+
+<!-- =========================
+     GAME PASSES
+     ========================= -->
+
+<h1>DOORS Game Passes</h1>
+
+<div class="center-images">
+
+    <a href="https://www.roblox.com/game-pass/972013377/ADMIN-PANEL">
+        <img
+            src="https://codehs.com/uploads/55e56ec1a88a5657e10bb2db72724c6f"
+            alt="ADMIN-PANEL">
+    </a>
+
+    <a href="https://www.roblox.com/game-pass/1640556449/KITTY-BUNDLE">
+        <img
+            src="https://codehs.com/uploads/2e1ea20bc2f910802d1d93fa8e7722bb"
+            alt="KITTY-BUNDLE">
+    </a>
+
+</div>
+
+<!-- =========================
+     FOLLOW / JOIN
+     ========================= -->
+
+<h1>Follow And Join My Stuff</h1>
+
+<div class="center-images">
+
+    <a href="https://www.roblox.com/users/4173739403/profile">
+        <img
+            class="roblox-avatar"
+            data-roblox-user-id="4173739403"
+            src="https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=4173739403&size=150x150&format=Png&isCircular=false&thumbnailType=HeadShot"
+            alt="Dinosaurgodn">
+    </a>
+
+    <a href="https://www.roblox.com/communities/32006503/Dinosaurgodns-group#!/about">
+        <img
+            src="https://codehs.com/uploads/eb8962dfa110c7f83dc867882eb8574b"
+            alt="Roblox Community">
+    </a>
+
+    <a href="https://www.youtube.com/@Dinosaurgodn">
+        <img
+            id="DiffrentSize10"
+            src="https://codehs.com/uploads/44ca8e4bfc21f71c9bb7325cc70a53f6"
+            alt="YouTube">
+    </a>
+
+    <a href="https://www.instagram.com/dinosaurgodn/">
+        <img
+            src="https://codehs.com/uploads/6b0296705f2e6c9960f2de118b3845b6"
+            alt="Instagram">
+    </a>
+
+    <a href="https://discord.gg/MbtWuYZa8F">
+        <img
+            id="DiffrentSize1"
+            src="https://codehs.com/uploads/65ae9c3b88472bdee63ba419c7cb0e19"
+            alt="Discord">
+    </a>
+
+    <a href="https://x.com/Dinosaurgodn">
+        <img
+            src="https://codehs.com/uploads/87f15e5f510f8c6cbbbbeb7eda9202e0"
+            alt="Twitter">
+    </a>
+
+    <a href="https://www.twitch.tv/dinosaurgodn">
+        <img
+            src="https://codehs.com/uploads/203e3efb2d7d5d0e01056d391af21bbd"
+            alt="Twitch">
+    </a>
+
+</div>
+
+<!-- =========================
+     FOOTER
+     ========================= -->
+
+<footer class="footer">
+    <h1>Thanks For Scrolling This Far! :D</h1>
+</footer>
+
+<!-- =========================
+     ROBLOX AVATAR UPDATER
+     ========================= -->
+
+<script>
+(async function updateRobloxAvatars() {
+
+    const avatarImages =
+        document.querySelectorAll("[data-roblox-user-id]");
+
+    if (!avatarImages.length) return;
+
+    const userIds = [...avatarImages].map(img =>
+        img.getAttribute("data-roblox-user-id")
+    );
+
+    const robloxApi =
+        "https://thumbnails.roblox.com/v1/users/avatar-headshot" +
+        "?userIds=" +
+        encodeURIComponent(userIds.join(",")) +
+        "&size=150x150&format=Png&isCircular=false";
+
+    /*
+     * AllOrigins adds CORS headers so this static
+     * GitHub Pages site can read the JSON.
+     */
+    const proxyUrl =
+        "https://api.allorigins.win/raw?url=" +
+        encodeURIComponent(robloxApi);
+
+    try {
+
+        const response = await fetch(proxyUrl, {
+            cache: "no-store"
+        });
+
+        if (!response.ok) {
+            throw new Error(
+                "Avatar proxy returned HTTP " +
+                response.status
+            );
+        }
+
+        const result = await response.json();
+
+        if (!result || !Array.isArray(result.data)) {
+            throw new Error(
+                "Unexpected Roblox thumbnail response."
+            );
+        }
+
+        const thumbnails = new Map(
+            result.data
+                .filter(
+                    item =>
+                        item &&
+                        item.targetId &&
+                        item.imageUrl
+                )
+                .map(
+                    item => [
+                        String(item.targetId),
+                        item.imageUrl
+                    ]
+                )
         );
 
-        const robloxApi =
-            "https://thumbnails.roblox.com/v1/users/avatar-headshot" +
-            "?userIds=" + encodeURIComponent(userIds.join(",")) +
-            "&size=150x150&format=Png&isCircular=false";
+        avatarImages.forEach(img => {
 
-        // AllOrigins adds CORS headers so this static GitHub Pages site can read the JSON.
-        const proxyUrl =
-            "https://api.allorigins.win/raw?url=" +
-            encodeURIComponent(robloxApi);
+            const userId =
+                img.getAttribute("data-roblox-user-id");
 
-        try {
-            const response = await fetch(proxyUrl, {
-                cache: "no-store"
-            });
+            const imageUrl =
+                thumbnails.get(userId);
 
-            if (!response.ok) {
-                throw new Error("Avatar proxy returned HTTP " + response.status);
+            if (imageUrl) {
+                img.src = imageUrl;
             }
 
-            const result = await response.json();
+        });
 
-            if (!result || !Array.isArray(result.data)) {
-                throw new Error("Unexpected Roblox thumbnail response.");
-            }
+    } catch (error) {
 
-            const thumbnails = new Map(
-                result.data
-                    .filter(item => item && item.targetId && item.imageUrl)
-                    .map(item => [String(item.targetId), item.imageUrl])
-            );
+        /*
+         * If the proxy fails, the original
+         * fallback image remains.
+         */
+        console.warn(
+            "Could not automatically update Roblox avatars:",
+            error
+        );
 
-            avatarImages.forEach(img => {
-                const userId = img.getAttribute("data-roblox-user-id");
-                const imageUrl = thumbnails.get(userId);
+    }
 
-                if (imageUrl) {
-                    img.src = imageUrl;
-                }
-            });
-        } catch (error) {
-            // Do nothing: each image keeps its existing fallback.
-            console.warn("Could not automatically update Roblox avatars:", error);
-        }
-    })();
-    </script>
+})();
+</script>
 
 </body>
 </html>
+```
