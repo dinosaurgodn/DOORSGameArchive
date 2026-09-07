@@ -1,232 +1,226 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+                <link rel="icon"
+                      href="https://codehs.com/uploads/4a8c90e314e446e76e01e8d7721770a9"
+                      type="image">
+            
+                <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+                      rel="stylesheet">
+            
+                <title>Dinosaurgodn</title>
+            
+                <style>
+                    /* =========================
+                       PAGE
+                       ========================= */
+            
+                    body {
+                        margin: 0;
+                        padding: 1px;
+                        background-image: url('https://codehs.com/uploads/356778ebb1c4e113c7be5a451567f215');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-attachment: fixed;
+                        background-color: black;
+                        color: white;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-family: 'Michroma', sans-serif;
+                    }
+            
+                    h1 {
+                        text-align: center;
+                        font-size: 30px;
+                        color: red;
+                        text-shadow:
+                            4px 4px 6px black,
+                            -4px -4px 6px black,
+                            4px -4px 6px black,
+                            -4px 4px 6px black;
+                    }
+            
+                    ```css
+            /* =========================
+               GENERAL IMAGE CONTAINERS
+               ========================= */
+            
+            .center-images {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                margin: 20px 0;
+            }
+            
+            .left-images {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+                margin: 20px 0;
+            }
+            
+            .right-images {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 20px;
+                margin: 20px 0;
+            }
+            
+            /* Normal images stay rectangular */
+            .center-images img,
+            .left-images img,
+            .right-images img {
+                border-radius: 10px;
+                object-fit: cover;
+                display: block;
+            }
+            
+            /* Hover effect for normal images */
+            .center-images a:hover img,
+            .left-images a:hover img,
+            .right-images a:hover img {
+                transform: scale(1.05);
+            }
+            
+            /* =========================
+               ROBLOX PROFILE PICTURES
+               ========================= */
+            
+            .roblox-avatar {
+                width: 150px;
+                height: 150px;
+                border-radius: 50% !important;
+                object-fit: cover;
+                display: block;
+                background: #111;
+            }
+            
+            /* =========================
+               DEVELOPMENT TEAM
+               ========================= */
+            
+            .team-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 30px;
+                margin: 20px 0 40px;
+            }
+            
+            .team-member {
+                width: 180px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: center;
+                gap: 12px;
+            }
+            
+            .team-member h2 {
+                margin: 0;
+                font-size: 18px;
+                color: white;
+                text-shadow:
+                    3px 3px 5px black,
+                    -3px -3px 5px black,
+                    3px -3px 5px black,
+                    -3px 3px 5px black;
+            }
+            
+            .team-member img {
+                display: block;
+            }
+            
+            /* =========================
+               YOUR ORIGINAL IMAGE SIZES
+               ========================= */
+            
+            #DiffrentSize1 {
+                height: 150px;
+                width: 200px;
+            }
+            
+            #DiffrentSize2 {
+                height: 130px;
+                width: 170px;
+            }
+            
+            #DiffrentSize3 {
+                height: 50px;
+                width: 90px;
+            }
+            
+            #DiffrentSize4 {
+                height: 150px;
+                width: 180px;
+            }
+            
+            #DiffrentSize5 {
+                height: 310px;
+                width: 540px;
+            }
+            
+            #DiffrentSize6 {
+                height: 200px;
+                width: 340px;
+            }
+            
+            #DiffrentSize7 {
+                height: 400px;
+                width: 350px;
+            }
+            
+            #DiffrentSize8 {
+                height: 500px;
+                width: 300px;
+            }
+            
+            #Diffrentsize9 {
+                height: 200px;
+                width: 340px;
+            }
+            
+            #DiffrentSize10 {
+                height: 150px;
+                width: 200px;
+            }
+            
+            #DiffrentSize11 {
+                height: 50px;
+                width: 50px;
+            }
+            
+            #DiffrentSize12 {
+                height: 114px;
+                width: 190px;
+            }
+            
+            #DiffrentSize13 {
+                height: 190px;
+                width: 190px;
+            }
+            
+            #DifferentSize14 {
+                height: 110px;
+                width: 110px;
+            }
+            
+            #DiffrentSize15 {
+                height: 240px;
+                width: 540px;
+            }
 
-    <link rel="icon"
-          href="https://codehs.com/uploads/4a8c90e314e446e76e01e8d7721770a9"
-          type="image">
-
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
-          rel="stylesheet">
-
-    <title>Dinosaurgodn</title>
-
-    <style>
-        /* =========================
-           PAGE
-           ========================= */
-
-        body {
-            margin: 0;
-            padding: 1px;
-            background-image: url('https://codehs.com/uploads/356778ebb1c4e113c7be5a451567f215');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-color: black;
-            color: white;
-            font-weight: normal;
-            font-style: normal;
-            font-family: 'Michroma', sans-serif;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 30px;
-            color: red;
-            text-shadow:
-                4px 4px 6px black,
-                -4px -4px 6px black,
-                4px -4px 6px black,
-                -4px 4px 6px black;
-        }
-
-        /* =========================
-           GENERAL IMAGE CONTAINERS
-           ========================= */
-
-        .center-images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .left-images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .right-images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        /*
-         * All normal images are circles.
-         * object-fit: cover prevents stretching.
-         */
-        .center-images img,
-        .left-images img,
-        .right-images img {
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Hover effect */
-        .center-images a:hover img,
-        .left-images a:hover img,
-        .right-images a:hover img {
-            transform: scale(1.05);
-        }
-
-        /* =========================
-           ROBLOX AVATARS
-           ========================= */
-
-        .roblox-avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50% !important;
-            object-fit: cover;
-            display: block;
-            background: #111;
-        }
-
-        /* =========================
-           DEVELOPMENT TEAM
-           ========================= */
-
-        .team-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 30px;
-            margin: 20px 0 40px;
-        }
-
-        .team-member {
-            width: 180px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            text-align: center;
-            gap: 12px;
-        }
-
-        .team-member h2 {
-            margin: 0;
-            font-size: 18px;
-            color: white;
-            text-shadow:
-                3px 3px 5px black,
-                -3px -3px 5px black,
-                3px -3px 5px black,
-                -3px 3px 5px black;
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* =========================
-           CUSTOM SIZES
-           ========================= */
-
-        #DiffrentSize1 {
-            height: 150px;
-            width: 200px;
-        }
-
-        #DiffrentSize2 {
-            height: 130px;
-            width: 170px;
-        }
-
-        #DiffrentSize3 {
-            height: 50px;
-            width: 90px;
-        }
-
-        #DiffrentSize4 {
-            height: 150px;
-            width: 180px;
-        }
-
-        #DiffrentSize5 {
-            height: 310px;
-            width: 540px;
-        }
-
-        #DiffrentSize6 {
-            height: 200px;
-            width: 340px;
-        }
-
-        #DiffrentSize7 {
-            height: 400px;
-            width: 350px;
-        }
-
-        #DiffrentSize8 {
-            height: 500px;
-            width: 300px;
-        }
-
-        #Diffrentsize9 {
-            height: 200px;
-            width: 340px;
-        }
-
-        #DiffrentSize10 {
-            height: 150px;
-            width: 200px;
-        }
-
-        #DiffrentSize11 {
-            height: 50px;
-            width: 50px;
-        }
-
-        #DiffrentSize12 {
-            height: 114px;
-            width: 190px;
-        }
-
-        #DiffrentSize13 {
-            height: 190px;
-            width: 190px;
-        }
-
-        #DifferentSize14 {
-            height: 110px;
-            width: 110px;
-        }
-
-        #DiffrentSize15 {
-            height: 240px;
-            width: 540px;
-        }
 
         /* =========================
            VIDEO
