@@ -1,225 +1,269 @@
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            
-                <link rel="icon"
-                      href="https://codehs.com/uploads/4a8c90e314e446e76e01e8d7721770a9"
-                      type="image">
-            
-                <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
-                      rel="stylesheet">
-            
-                <title>Dinosaurgodn</title>
-            
-                <style>
-                    /* =========================
-                       PAGE
-                       ========================= */
-            
-                    body {
-                        margin: 0;
-                        padding: 1px;
-                        background-image: url('https://codehs.com/uploads/356778ebb1c4e113c7be5a451567f215');
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        background-attachment: fixed;
-                        background-color: black;
-                        color: white;
-                        font-weight: normal;
-                        font-style: normal;
-                        font-family: 'Michroma', sans-serif;
-                    }
-            
-                    h1 {
-                        text-align: center;
-                        font-size: 30px;
-                        color: red;
-                        text-shadow:
-                            4px 4px 6px black,
-                            -4px -4px 6px black,
-                            4px -4px 6px black,
-                            -4px 4px 6px black;
-                    }
-            
-                    ```css
-            /* =========================
-               GENERAL IMAGE CONTAINERS
-               ========================= */
-            
-            .center-images {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-                margin: 20px 0;
-            }
-            
-            .left-images {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 20px;
-                margin: 20px 0;
-            }
-            
-            .right-images {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-end;
-                align-items: center;
-                gap: 20px;
-                margin: 20px 0;
-            }
-            
-            /* Normal images stay rectangular */
-            .center-images img,
-            .left-images img,
-            .right-images img {
-                border-radius: 10px;
-                object-fit: cover;
-                display: block;
-            }
-            
-            /* Hover effect for normal images */
-            .center-images a:hover img,
-            .left-images a:hover img,
-            .right-images a:hover img {
-                transform: scale(1.05);
-            }
-            
-            /* =========================
-               ROBLOX PROFILE PICTURES
-               ========================= */
-            
-            .roblox-avatar {
-                width: 150px;
-                height: 150px;
-                border-radius: 50% !important;
-                object-fit: cover;
-                display: block;
-                background: #111;
-            }
-            
-            /* =========================
-               DEVELOPMENT TEAM
-               ========================= */
-            
-            .team-grid {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: flex-start;
-                gap: 30px;
-                margin: 20px 0 40px;
-            }
-            
-            .team-member {
-                width: 180px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                text-align: center;
-                gap: 12px;
-            }
-            
-            .team-member h2 {
-                margin: 0;
-                font-size: 18px;
-                color: white;
-                text-shadow:
-                    3px 3px 5px black,
-                    -3px -3px 5px black,
-                    3px -3px 5px black,
-                    -3px 3px 5px black;
-            }
-            
-            .team-member img {
-                display: block;
-            }
-            
-            /* =========================
-               YOUR ORIGINAL IMAGE SIZES
-               ========================= */
-            
-            #DiffrentSize1 {
-                height: 150px;
-                width: 200px;
-            }
-            
-            #DiffrentSize2 {
-                height: 130px;
-                width: 170px;
-            }
-            
-            #DiffrentSize3 {
-                height: 50px;
-                width: 90px;
-            }
-            
-            #DiffrentSize4 {
-                height: 150px;
-                width: 180px;
-            }
-            
-            #DiffrentSize5 {
-                height: 310px;
-                width: 540px;
-            }
-            
-            #DiffrentSize6 {
-                height: 200px;
-                width: 340px;
-            }
-            
-            #DiffrentSize7 {
-                height: 400px;
-                width: 350px;
-            }
-            
-            #DiffrentSize8 {
-                height: 500px;
-                width: 300px;
-            }
-            
-            #Diffrentsize9 {
-                height: 200px;
-                width: 340px;
-            }
-            
-            #DiffrentSize10 {
-                height: 150px;
-                width: 200px;
-            }
-            
-            #DiffrentSize11 {
-                height: 50px;
-                width: 50px;
-            }
-            
-            #DiffrentSize12 {
-                height: 114px;
-                width: 190px;
-            }
-            
-            #DiffrentSize13 {
-                height: 190px;
-                width: 190px;
-            }
-            
-            #DifferentSize14 {
-                height: 110px;
-                width: 110px;
-            }
-            
-            #DiffrentSize15 {
-                height: 240px;
-                width: 540px;
-            }
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon"
+          href="https://codehs.com/uploads/4a8c90e314e446e76e01e8d7721770a9"
+          type="image">
+
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+          rel="stylesheet">
+
+    <title>Dinosaurgodn</title>
+
+    <style>
+
+        /* =========================
+           PAGE
+           ========================= */
+
+        body {
+            margin: 0;
+            padding: 1px;
+            background-image: url('https://codehs.com/uploads/356778ebb1c4e113c7be5a451567f215');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: black;
+            color: white;
+            font-weight: normal;
+            font-style: normal;
+            font-family: 'Michroma', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            color: red;
+            text-shadow:
+                4px 4px 6px black,
+                -4px -4px 6px black,
+                4px -4px 6px black,
+                -4px 4px 6px black;
+        }
+
+
+        /* =========================
+           IMAGE CONTAINERS
+           ========================= */
+
+        .center-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .left-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .right-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+
+        /* =========================
+           NORMAL IMAGES
+           ========================= */
+
+        /*
+         * This is the important part:
+         * normal images are 150x150 instead
+         * of using their huge original size.
+         */
+
+        .center-images img,
+        .left-images img,
+        .right-images img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        .center-images a:hover img,
+        .left-images a:hover img,
+        .right-images a:hover img {
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           ROBLOX PROFILE PICTURES
+           ========================= */
+
+        .roblox-avatar {
+            width: 150px !important;
+            height: 150px !important;
+            border-radius: 50% !important;
+            object-fit: cover;
+            display: block;
+            background: #111;
+        }
+
+
+        /* =========================
+           DEVELOPMENT TEAM
+           ========================= */
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            margin: 20px 0 40px;
+        }
+
+        .team-member {
+            width: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            gap: 12px;
+        }
+
+        .team-member h2 {
+            margin: 0;
+            font-size: 18px;
+            color: white;
+            text-shadow:
+                3px 3px 5px black,
+                -3px -3px 5px black,
+                3px -3px 5px black,
+                -3px 3px 5px black;
+        }
+
+        .team-member img:not(.roblox-avatar) {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+
+        /* =========================
+           CUSTOM IMAGE SIZES
+           ========================= */
+
+        #DiffrentSize1 {
+            height: 150px !important;
+            width: 200px !important;
+            border-radius: 10px !important;
+        }
+
+        #DiffrentSize2 {
+            height: 130px !important;
+            width: 170px !important;
+            border-radius: 10px !important;
+        }
+
+        #DiffrentSize3 {
+            height: 50px !important;
+            width: 90px !important;
+            border-radius: 10px !important;
+        }
+
+        #DiffrentSize4 {
+            height: 150px !important;
+            width: 180px !important;
+            border-radius: 10px !important;
+        }
+
+        #DiffrentSize5 {
+            height: 310px !important;
+            width: 540px !important;
+            border-radius: 10px !important;
+        }
+
+        /*
+         * Game thumbnails
+         */
+        #DiffrentSize6 {
+            height: 200px !important;
+            width: 340px !important;
+            border-radius: 10px !important;
+        }
+
+        #DiffrentSize7 {
+            height: 400px !important;
+            width: 350px !important;
+            border-radius: 10px !important;
+        }
+
+        #DiffrentSize8 {
+            height: 500px !important;
+            width: 300px !important;
+            border-radius: 10px !important;
+        }
+
+        #Diffrentsize9 {
+            height: 200px !important;
+            width: 340px !important;
+            border-radius: 10px !important;
+        }
+
+        #DiffrentSize10 {
+            height: 150px !important;
+            width: 200px !important;
+            border-radius: 10px !important;
+        }
+
+        #DiffrentSize11 {
+            height: 50px !important;
+            width: 50px !important;
+            border-radius: 10px !important;
+        }
+
+        /*
+         * Update trailer images
+         */
+        #DiffrentSize12 {
+            height: 114px !important;
+            width: 190px !important;
+            border-radius: 10px !important;
+        }
+
+        /*
+         * Game icons
+         */
+        #DiffrentSize13 {
+            height: 190px !important;
+            width: 190px !important;
+            border-radius: 10px !important;
+        }
+
+        #DifferentSize14 {
+            height: 110px !important;
+            width: 110px !important;
+            border-radius: 10px !important;
+        }
+
+        #DiffrentSize15 {
+            height: 240px !important;
+            width: 540px !important;
+            border-radius: 10px !important;
+        }
 
 
         /* =========================
@@ -241,6 +285,7 @@
             height: 20%;
         }
 
+
         /* =========================
            FOOTER
            ========================= */
@@ -249,13 +294,16 @@
             text-align: center;
             margin-top: 20px;
         }
+
     </style>
 </head>
+
 
 <body>
 
 <header>
 </header>
+
 
 <!-- =========================
      MAIN DOORS LINKS
@@ -264,6 +312,7 @@
 <h1>DOORS Game & Development Place</h1>
 
 <div class="center-images">
+
     <a href="https://www.roblox.com/games/6516141723/DOORS">
         <img
             src="https://codehs.com/uploads/aef3c5ac4cc97664c7739a3ea09efbc6"
@@ -275,7 +324,9 @@
             src="https://codehs.com/uploads/d686624fb5ab6fc621ba85cc6d1599d0"
             alt="D-TESTING">
     </a>
+
 </div>
+
 
 <!-- =========================
      DEVELOPMENT TEAM
@@ -286,6 +337,7 @@
 <div class="team-grid">
 
     <div class="team-member">
+
         <h2>Lsplash / LightningSplash</h2>
 
         <a href="https://www.roblox.com/users/8645047/profile">
@@ -301,9 +353,12 @@
                 src="https://codehs.com/uploads/f03aba9a75a57f46ae94ecf4c52e82d6"
                 alt="LSPLASHTwitter">
         </a>
+
     </div>
 
+
     <div class="team-member">
+
         <h2>RediblesQW / Red</h2>
 
         <a href="https://www.roblox.com/users/41767201/profile">
@@ -319,10 +374,13 @@
                 src="https://codehs.com/uploads/2fc3003c713ae490f56f9280b3a1e6f3"
                 alt="RediblesTwitter">
         </a>
+
     </div>
 
+
     <div class="team-member">
-        <h2>Jasper_Creatons</h2>
+
+        <h2>Jasper_Creatons / Jasper</h2>
 
         <a href="https://www.roblox.com/users/1418691708/profile">
             <img
@@ -331,9 +389,12 @@
                 src="https://www.roblox.com/headshot-thumbnail/image?userId=1418691708&width=150&height=150&format=png"
                 alt="Jasper_Creatons">
         </a>
+
     </div>
 
+
     <div class="team-member">
+
         <h2>Normally_Avaradge</h2>
 
         <a href="https://www.roblox.com/users/17437100/profile">
@@ -343,9 +404,12 @@
                 src="https://www.roblox.com/headshot-thumbnail/image?userId=17437100&width=150&height=150&format=png"
                 alt="Normally_Avaradge">
         </a>
+
     </div>
 
+
     <div class="team-member">
+
         <h2>Tom</h2>
 
         <a href="https://www.roblox.com/users/26266254/profile">
@@ -355,9 +419,12 @@
                 src="https://www.roblox.com/headshot-thumbnail/image?userId=26266254&width=150&height=150&format=png"
                 alt="Tom">
         </a>
+
     </div>
 
+
     <div class="team-member">
+
         <h2>Stryfal</h2>
 
         <a href="https://www.roblox.com/users/57072827/profile">
@@ -367,9 +434,12 @@
                 src="https://www.roblox.com/headshot-thumbnail/image?userId=57072827&width=150&height=150&format=png"
                 alt="Stryfal">
         </a>
+
     </div>
 
+
     <div class="team-member">
+
         <h2>Echidenpai</h2>
 
         <a href="https://www.roblox.com/users/109927729/profile">
@@ -379,9 +449,12 @@
                 src="https://www.roblox.com/headshot-thumbnail/image?userId=109927729&width=150&height=150&format=png"
                 alt="Echidenpai">
         </a>
+
     </div>
 
+
     <div class="team-member">
+
         <h2>Ghostly_Wowzers</h2>
 
         <a href="https://www.roblox.com/users/64758432/profile">
@@ -391,9 +464,12 @@
                 src="https://www.roblox.com/headshot-thumbnail/image?userId=64758432&width=150&height=150&format=png"
                 alt="Ghostly_Wowzers">
         </a>
+
     </div>
 
+
     <div class="team-member">
+
         <h2>SComics</h2>
 
         <a href="https://www.roblox.com/users/76144759/profile">
@@ -403,9 +479,12 @@
                 src="https://www.roblox.com/headshot-thumbnail/image?userId=76144759&width=150&height=150&format=png"
                 alt="SComics">
         </a>
+
     </div>
 
+
     <div class="team-member">
+
         <h2>Puffo</h2>
 
         <a href="https://www.roblox.com/users/37110565/profile">
@@ -415,9 +494,12 @@
                 src="https://www.roblox.com/headshot-thumbnail/image?userId=37110565&width=150&height=150&format=png"
                 alt="Puffo">
         </a>
+
     </div>
 
+
     <div class="team-member">
+
         <h2>ellieflopper</h2>
 
         <a href="https://www.roblox.com/users/109282935/profile">
@@ -427,9 +509,11 @@
                 src="https://www.roblox.com/headshot-thumbnail/image?userId=109282935&width=150&height=150&format=png"
                 alt="ellieflopper">
         </a>
+
     </div>
 
 </div>
+
 
 <!-- =========================
      ALL DOORS ICONS
@@ -556,7 +640,7 @@
     <a href="https://www.roblox.com/games/6516141723/DOORS">
         <img id="DiffrentSize13"
              src="https://codehs.com/uploads/a6fba21a03e3d7752098358683708b98"
-             alt="CHAOS-MODE 🌌">
+             alt="CHAOS-MODE">
     </a>
 
     <a href="https://www.roblox.com/games/6516141723/DOORS">
@@ -572,6 +656,7 @@
     </a>
 
 </div>
+
 
 <!-- =========================
      ALL DOORS GAME THUMBNAILS
@@ -721,6 +806,7 @@
 
 </div>
 
+
 <!-- =========================
      DOORS UPDATE TRAILERS
      ========================= -->
@@ -863,6 +949,7 @@
 
 </div>
 
+
 <!-- =========================
      DOORS UGC
      ========================= -->
@@ -872,36 +959,32 @@
 <div class="center-images">
 
     <a href="https://www.roblox.com/catalog/126247458615142/DOORS-Doors-Mans-Beanie">
-        <img
-            src="https://codehs.com/uploads/632ff54f476c1b81cb1097a61ef5ab1f"
-            alt="Doors-Mans-Beanie">
+        <img src="https://codehs.com/uploads/632ff54f476c1b81cb1097a61ef5ab1f"
+             alt="Doors-Mans-Beanie">
     </a>
 
     <a href="https://www.roblox.com/catalog/110102774584171/DOORS-Doors-Mans-Studs">
-        <img
-            src="https://codehs.com/uploads/1d4312034e73fa226a886481baa546df"
-            alt="Doors-Mans-Studs">
+        <img src="https://codehs.com/uploads/1d4312034e73fa226a886481baa546df"
+             alt="Doors-Mans-Studs">
     </a>
 
     <a href="https://www.roblox.com/catalog/131178144447181/DOORS-Doors-Mans-Stubble">
-        <img
-            src="https://codehs.com/uploads/b0c9e5599877b1ce86e161fd67e79cc7"
-            alt="Doors-Mans-Stubble">
+        <img src="https://codehs.com/uploads/b0c9e5599877b1ce86e161fd67e79cc7"
+             alt="Doors-Mans-Stubble">
     </a>
 
     <a href="https://www.roblox.com/catalog/93505697394817/DOORS-Doors-Mans-Collar">
-        <img
-            src="https://codehs.com/uploads/f816d8d500d95592b862ef03029dad1f"
-            alt="Doors-Mans-Collar">
+        <img src="https://codehs.com/uploads/f816d8d500d95592b862ef03029dad1f"
+             alt="Doors-Mans-Collar">
     </a>
 
     <a href="https://www.roblox.com/catalog/120517971149022/DOORS-Doors-Mans-Cross-Necklace">
-        <img
-            src="https://codehs.com/uploads/efe1f1952560720558b95a757c915e76"
-            alt="Doors-Mans-Cross-Necklace">
+        <img src="https://codehs.com/uploads/efe1f1952560720558b95a757c915e76"
+             alt="Doors-Mans-Cross-Necklace">
     </a>
 
 </div>
+
 
 <!-- =========================
      HOTEL MINES UGC
@@ -1033,7 +1116,7 @@
 
     <a href="https://www.roblox.com/catalog/12443794241/DOORS-El-Goblinos-Tail">
         <img src="https://codehs.com/uploads/bee9d97f190b456d7dd748dcd1955f9a"
-             alt="El-Goblino-Tail">
+             alt="El-Goblinos-Tail">
     </a>
 
     <a href="https://www.roblox.com/catalog/14581277349/DOORS-Seeks-Eye">
@@ -1192,6 +1275,7 @@
     </a>
 
 </div>
+
 
 <!-- =========================
      BACKDOOR / OUTDOORS / ARCHIVES UGC
@@ -1458,6 +1542,7 @@
 
 </div>
 
+
 <!-- =========================
      GAME PASSES
      ========================= -->
@@ -1480,8 +1565,9 @@
 
 </div>
 
+
 <!-- =========================
-     FOLLOW / JOIN
+     FOLLOW AND JOIN
      ========================= -->
 
 <h1>Follow And Join My Stuff</h1>
@@ -1536,6 +1622,7 @@
 
 </div>
 
+
 <!-- =========================
      FOOTER
      ========================= -->
@@ -1544,17 +1631,21 @@
     <h1>Thanks For Scrolling This Far! :D</h1>
 </footer>
 
+
 <!-- =========================
      ROBLOX AVATAR UPDATER
      ========================= -->
 
 <script>
+
 (async function updateRobloxAvatars() {
 
     const avatarImages =
         document.querySelectorAll("[data-roblox-user-id]");
 
-    if (!avatarImages.length) return;
+    if (!avatarImages.length) {
+        return;
+    }
 
     const userIds = [...avatarImages].map(img =>
         img.getAttribute("data-roblox-user-id")
@@ -1567,9 +1658,10 @@
         "&size=150x150&format=Png&isCircular=false";
 
     /*
-     * AllOrigins adds CORS headers so this static
+     * AllOrigins adds CORS headers so this
      * GitHub Pages site can read the JSON.
      */
+
     const proxyUrl =
         "https://api.allorigins.win/raw?url=" +
         encodeURIComponent(robloxApi);
@@ -1581,21 +1673,26 @@
         });
 
         if (!response.ok) {
+
             throw new Error(
                 "Avatar proxy returned HTTP " +
                 response.status
             );
+
         }
 
         const result = await response.json();
 
         if (!result || !Array.isArray(result.data)) {
+
             throw new Error(
                 "Unexpected Roblox thumbnail response."
             );
+
         }
 
         const thumbnails = new Map(
+
             result.data
                 .filter(
                     item =>
@@ -1609,6 +1706,7 @@
                         item.imageUrl
                     ]
                 )
+
         );
 
         avatarImages.forEach(img => {
@@ -1620,7 +1718,9 @@
                 thumbnails.get(userId);
 
             if (imageUrl) {
+
                 img.src = imageUrl;
+
             }
 
         });
@@ -1631,6 +1731,7 @@
          * If the proxy fails, the original
          * fallback image remains.
          */
+
         console.warn(
             "Could not automatically update Roblox avatars:",
             error
@@ -1639,8 +1740,8 @@
     }
 
 })();
+
 </script>
 
 </body>
 </html>
-```
