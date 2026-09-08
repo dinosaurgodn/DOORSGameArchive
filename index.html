@@ -1735,66 +1735,119 @@
     const avatarImages =
         document.querySelectorAll(".roblox-avatar");
 
-    avatarImages.forEach(img => {
+    if (!avatarImages.length) return;
 
-        const userId =
-            img.getAttribute("data-roblox-user-id");
+    const userIds = [
+        ...new Set(
+            Array.from(avatarImages)
+                .map(img => img.getAttribute("data-roblox-user-id"))
+                .filter(Boolean)
+        )
+    ];
 
-        if (!userId) return;
+    if (!userIds.length) return;
 
-        // Load the Roblox avatar directly.
-        // This removes the slow AllOrigins proxy.
-        const avatarUrl =
-            "https://thumbnails.roblox.com/v1/users/avatar-headshot" +
-            "?userIds=" + encodeURIComponent(userId) +
-            "&size=150x150" +
-            "&format=Png" +
-            "&isCircular=false";
+    /*
+     * Get ALL Roblox avatars in one request.
+     * This is much faster and avoids sending a separate
+     * request for every single profile.
+     */
+    const avatarUrl =
+        "https://thumbnails.roblox.com/v1/users/avatar-headshot" +
+        "?userIds=" + userIds.join(",") +
+        "&size=150x150" +
+        "&format=Png" +
+        "&isCircular=false";
 
-        // Ask Roblox for the thumbnail immediately.
-        fetch(avatarUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(
-                        "Roblox thumbnail request failed: " +
-                        response.status
-                    );
+    fetch(avatarUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(
+                    "Roblox thumbnail request failed: " +
+                    response.status
+                );
+            }
+
+            return response.json();
+        })
+        .then(result => {
+
+            if (
+                !result ||
+                !Array.isArray(result.data)
+            ) {
+                throw new Error(
+                    "Invalid Roblox thumbnail response."
+                );
+            }
+
+            /*
+             * Put each returned avatar into the correct
+             * profile picture.
+             */
+            const avatarMap = {};
+
+            result.data.forEach(user => {
+                if (user.targetId && user.imageUrl) {
+                    avatarMap[String(user.targetId)] =
+                        user.imageUrl;
                 }
+            });
 
-                return response.json();
-            })
-            .then(result => {
+            avatarImages.forEach(img => {
 
-                if (
-                    !result ||
-                    !Array.isArray(result.data) ||
-                    !result.data.length
-                ) {
-                    throw new Error(
-                        "No Roblox thumbnail returned."
-                    );
-                }
+                const userId =
+                    img.getAttribute("data-roblox-user-id");
+
+                if (!userId) return;
 
                 const imageUrl =
-                    result.data[0].imageUrl;
+                    avatarMap[String(userId)];
 
                 if (imageUrl) {
                     img.src = imageUrl;
+                } else {
+                    /*
+                     * Direct Roblox fallback if an avatar
+                     * wasn't returned by the API.
+                     */
+                    img.src =
+                        "https://thumbnails.roblox.com/v1/users/avatar-headshot" +
+                        "?userIds=" + encodeURIComponent(userId) +
+                        "&size=150x150" +
+                        "&format=Png" +
+                        "&isCircular=false";
                 }
-
-            })
-            .catch(error => {
-
-                // Keep the original fallback image
-                // if Roblox cannot be reached.
-                console.warn(
-                    "Could not update Roblox avatar:",
-                    error
-                );
-
             });
 
-    });
+        })
+        .catch(error => {
+
+            console.warn(
+                "Roblox avatar API failed. Using direct image fallback:",
+                error
+            );
+
+            /*
+             * If the batch API fails completely,
+             * load every avatar directly instead.
+             */
+            avatarImages.forEach(img => {
+
+                const userId =
+                    img.getAttribute("data-roblox-user-id");
+
+                if (!userId) return;
+
+                img.src =
+                    "https://thumbnails.roblox.com/v1/users/avatar-headshot" +
+                    "?userIds=" + encodeURIComponent(userId) +
+                    "&size=150x150" +
+                    "&format=Png" +
+                    "&isCircular=false";
+            });
+
+        });
 
 })();
 </script>
